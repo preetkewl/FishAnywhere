@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+
+
+    <include
+        layout="@layout/appbar_create_listing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:id="@+id/shadow"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_5dp"
+        android:background="@color/shadow_line"/>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <include
+
+                    layout="@layout/top_layout_createlisting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+                <View
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_1dp"
+                    android:background="@color/login_text_grey"
+
+                    />
+
+
+                <LinearLayout
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+                    android:layout_marginRight="@dimen/dimen_20dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:id="@+id/tv_address_info"
+                        android:text="@string/address_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/dimen_create_lt_text"
+                        android:textColor="@color/createlist_formguide"
+                        />
+
+
+                    <TextView
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:id="@+id/tv_street_name"
+                        android:text="@string/street_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/createlt_lt_heading"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"
+
+                        />
+
+                    <EditText
+                        android:maxLines="1"
+                        android:padding="@dimen/dimen_10dp"
+                        android:id="@+id/et_street_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_cl_etbox"
+                        android:layout_marginTop="@dimen/dimen_5dp"
+                        android:background="@drawable/selector_edittext_createlisting"
+                        android:inputType="textPersonName"
+                        />
+
+
+                    <TextView
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:id="@+id/tv_city"
+                        android:text="@string/city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/createlt_lt_heading"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"
+
+                        />
+
+                    <EditText
+                        android:maxLines="1"
+                        android:padding="@dimen/dimen_10dp"
+                        android:id="@+id/et_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_cl_etbox"
+                        android:layout_marginTop="@dimen/dimen_5dp"
+                        android:background="@drawable/selector_edittext_createlisting"
+                        android:inputType="textPersonName"
+                        />
+
+                    <TextView
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:id="@+id/tv_state"
+                        android:text="@string/state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/createlt_lt_heading"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"
+
+                        />
+
+                    <EditText
+                        android:maxLines="1"
+                        android:padding="@dimen/dimen_10dp"
+                        android:id="@+id/et_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_cl_etbox"
+                        android:layout_marginTop="@dimen/dimen_5dp"
+                        android:background="@drawable/selector_edittext_createlisting"
+                        android:inputType="textPersonName"
+                        />
+
+                    <TextView
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:id="@+id/tv_postalcode"
+                        android:text="@string/postalcode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/createlt_lt_heading"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"
+
+                        />
+
+                    <EditText
+                        android:maxLines="1"
+                        android:padding="@dimen/dimen_10dp"
+                        android:id="@+id/et_postalcode"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_cl_etbox"
+                        android:layout_marginTop="@dimen/dimen_5dp"
+                        android:background="@drawable/selector_edittext_createlisting"
+                        android:inputType="textPersonName"
+                        />
+                    <TextView
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:id="@+id/tv_country"
+                        android:text="@string/country"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/createlt_lt_heading"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"
+
+                        />
+
+                    <EditText
+                        android:maxLines="1"
+                        android:padding="@dimen/dimen_10dp"
+                        android:id="@+id/et_country"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_cl_etbox"
+                        android:layout_marginTop="@dimen/dimen_5dp"
+                        android:background="@drawable/selector_edittext_createlisting"
+                        android:inputType="textPersonName"
+                        />
+
+                    <TextView
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:id="@+id/tv_launchlatitude"
+                        android:text="@string/launchlatitude"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/createlt_lt_heading"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"
+
+                        />
+
+                    <EditText
+                        android:maxLines="1"
+                        android:padding="@dimen/dimen_10dp"
+                        android:id="@+id/et_launchlatitude"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_cl_etbox"
+                        android:layout_marginTop="@dimen/dimen_5dp"
+                        android:background="@drawable/selector_edittext_createlisting"
+                        android:inputType="textPersonName"
+                        />
+
+                    <TextView
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:id="@+id/tv_launchlongitude"
+                        android:text="@string/launchlongitude"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/createlt_lt_heading"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"
+
+                        />
+
+                    <EditText
+                        android:maxLines="1"
+                        android:padding="@dimen/dimen_10dp"
+                        android:id="@+id/et_launchlongitude"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_cl_etbox"
+                        android:layout_marginTop="@dimen/dimen_5dp"
+                        android:background="@drawable/selector_edittext_createlisting"
+                        android:inputType="textPersonName"
+                        />
+
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:background="@drawable/panggge"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_40dp"/>
+
+            <LinearLayout
+
+                android:gravity="center"
+                android:background="@drawable/info_bg_middle"
+                android:weightSum="3.8"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_80dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight=".2"
+                    android:layout_height="wrap_content"/>
+                <Button
+                    android:drawablePadding="@dimen/dimen_8dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:padding="@dimen/dimen_10dp"
+                    android:drawableLeft="@drawable/ic_crt_lt_previus_bt"
+                    android:id="@+id/bt_launchlocation_previous"
+                    android:textSize="@dimen/dimen_cllstbt13sp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/dimen_45dp"
+                    android:background="@drawable/selector_bt_crt_lt_prv"
+                    android:text="@string/previous"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight=".2"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:drawablePadding="@dimen/dimen_8dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:id="@+id/bt_launchlocation_next"
+                    android:drawableRight="@drawable/ic_cl_next_bt"
+                    android:paddingRight="@dimen/dimen_10dp"
+                    android:textSize="@dimen/dimen_cllstbt13sp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/dimen_45dp"
+                    android:background="@drawable/selector_button_createlist"
+                    android:text="@string/next"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight=".2"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:fontFamily="sans-serif-medium"
+                    android:textSize="@dimen/dimen_cllstbt13sp"
+                    android:id="@+id/bt_launchlocation_save_exit"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/dimen_45dp"
+                    android:background="@drawable/selector_button_createlist"
+                    android:text="@string/saveexit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight=".2"
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+
+</LinearLayout>

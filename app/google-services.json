@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "908577855665",
+    "firebase_url": "https://fish-anywhere.firebaseio.com",
+    "project_id": "fish-anywhere",
+    "storage_bucket": "fish-anywhere.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:908577855665:android:80a1c83a914a5cd108aa90",
+        "android_client_info": {
+          "package_name": "com.app.fishanywhere"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "908577855665-cvelccl45gvqrtvlp6fllm27bibovka5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDt5-Ur3rCN_rBCJ6pjSnNy3l8WzrR6emY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "908577855665-cvelccl45gvqrtvlp6fllm27bibovka5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "908577855665-1t905mivbt4us47v1dlcmokpnftta154.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.app.fishanywhere"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

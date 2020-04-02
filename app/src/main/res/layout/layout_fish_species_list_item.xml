@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/cb_checked"-->
+<!--            android:gravity="start|center_vertical"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:background="@drawable/selector_cb_crt_lst_selected"-->
+<!--            android:visibility="visible"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+
+<!--            <ImageView-->
+<!--                android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:src="@drawable/ic_cb_tick"-->
+<!--                android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                android:layout_height="@dimen/dimen_iv_cb_20dp"-->
+<!--                />-->
+<!--            <TextView-->
+<!--                android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                android:text="@string/jigging"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="@dimen/dimen_10sp"-->
+<!--                android:textColor="@color/colorWhite"-->
+
+<!--                />-->
+
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/cb_unchecked"-->
+<!--            android:background="@drawable/shape_reactangle_border"-->
+<!--            android:gravity="start|center_vertical"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:visibility="gone"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+
+<!--            <ImageView-->
+<!--                android:layout_marginLeft="@dimen/dimen_8dp"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:src="@drawable/ic_checkbox"-->
+<!--                android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                />-->
+<!--            <TextView-->
+<!--                android:fontFamily="sans-serif-medium"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:layout_marginLeft="@dimen/dimen_10dp"-->
+<!--                android:text="@string/jigging"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:textSize="@dimen/dimen_11sp"-->
+<!--                android:textColor="@color/colorBlack"-->
+
+<!--                />-->
+
+<!--        </LinearLayout>-->
+
+<!--    </RelativeLayout>-->
+
+
+
+
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_margin="@dimen/dimen_20dp"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_40dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/ll_checked"
+                        android:gravity="start|center_vertical"
+                        android:orientation="horizontal"
+                        android:background="@drawable/selector_cb_crt_lst_selected"
+                        android:visibility="invisible"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_40dp">
+
+                        <ImageView
+                            android:layout_marginLeft="@dimen/dimen_6dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_cb_tick"
+                            android:layout_width="@dimen/dimen_iv_cb_20dp"
+                            android:layout_height="@dimen/dimen_iv_cb_20dp"
+                            />
+                        <TextView
+                            android:id="@+id/tv_fishspecies_checked"
+                            android:layout_marginLeft="@dimen/dimen_6dp"
+                            android:text="@string/jigging"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/dimen_10sp"
+                            android:textColor="@color/colorWhite"
+
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_unchecked"
+                        android:background="@drawable/shape_reactangle_border"
+                        android:gravity="start|center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="visible"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_40dp">
+
+                        <ImageView
+                            android:layout_marginLeft="@dimen/dimen_8dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_checkbox"
+                            android:layout_width="@dimen/dimen_iv_cb_20dp"
+                            android:layout_height="wrap_content"
+                            />
+                        <TextView
+                            android:id="@+id/tv_fishspecies_unchecked"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/dimen_10dp"
+                            android:text="@string/jigging"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="@dimen/dimen_11sp"
+                            android:textColor="@color/colorBlack"
+
+                            />
+
+                    </LinearLayout>
+                </RelativeLayout>>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+
+
+

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:padding="@dimen/dimen_10dp"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:background="@drawable/shape_reactangle_border"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+
+            android:textStyle="bold"
+            android:textSize="@dimen/dimen_15dp"
+            android:textColor="@color/colorBlack"
+            android:text="Capt. John Smith"
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:layout_below="@+id/tv_username"
+            android:textStyle="bold"
+            android:textSize="@dimen/dimen_12dp"
+            android:textColor="@color/colorGreen"
+            android:text="USD $200"
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_toRightOf="@+id/tv_price"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:layout_below="@+id/tv_username"
+            android:textColor="@color/colorDarkGray"
+
+            android:textSize="@dimen/dimen_12dp"
+            android:text=" - 8 hours"
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:layout_below="@+id/tv_time"
+            android:textColor="@color/colorDarkGray"
+            android:textSize="@dimen/dimen_12dp"
+            android:text="Includes 2 Guests"
+            android:id="@+id/tv_includes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+
+            android:layout_marginRight="110dp"
+            android:layout_marginEnd="110dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:layout_below="@+id/tv_includes"
+            android:textColor="@color/colorDarkGray"
+            android:textSize="@dimen/dimen_12dp"
+            android:text="+ $100 per additional guest, Max 5 guest "
+            android:id="@+id/tv_additional_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginRight="110dp"
+            android:layout_marginEnd="110dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:layout_below="@+id/tv_additional_cost"
+            android:textColor="@color/colorDarkGray"
+            android:textSize="@dimen/dimen_12dp"
+            android:text="Created At"
+            android:id="@+id/tvCreatedAt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginRight="110dp"
+            android:layout_marginEnd="110dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:layout_below="@+id/tvCreatedAt"
+            android:textColor="@color/colorDarkGray"
+            android:textSize="@dimen/dimen_12dp"
+            android:text=" Booking ID"
+            android:id="@+id/tvBookingID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/dimen_22dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/dimen_5dp"
+            android:layout_marginRight="@dimen/dimen_5dp"
+            android:layout_toLeftOf="@+id/rl_duplicate"
+            android:visibility="visible"
+            android:id="@+id/rl_edit"
+            android:layout_width="@dimen/dimen_100dp"
+            android:layout_height="@dimen/dimen_70dp">
+
+            <LinearLayout
+
+                android:id="@+id/booking_confirm"
+                android:visibility="gone"
+                android:gravity="center"
+
+                android:background="@drawable/selector_cb_crt_lst_selected"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50dp">
+                <ImageView
+                    android:src="@drawable/ic_cb_tick"
+                    android:layout_width="@dimen/dimen_20dp"
+                    android:layout_height="@dimen/dimen_20dp"/>
+                <TextView
+                    android:layout_marginLeft="@dimen/dimen_3dp"
+                    android:textSize="@dimen/dimen_13sp"
+                    android:textColor="@color/colorWhite"
+                    android:text="@string/booking_confirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+    android:id="@+id/accept_reject"
+    android:visibility="visible"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/ll_accept"
+                android:gravity="center"
+                android:background="@drawable/accept"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_30dp">
+                <TextView
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/dimen_3dp"
+                    android:textSize="@dimen/dimen_15sp"
+                    android:textColor="@color/colorWhite"
+                    android:text="@string/accept"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_reject"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:gravity="center"
+        android:background="@drawable/reject"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_30dp">
+        <TextView
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/dimen_3dp"
+            android:textSize="@dimen/dimen_15sp"
+            android:textColor="@color/colorWhite"
+            android:text="@string/reject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</LinearLayout>
+            <LinearLayout
+                android:id="@+id/other"
+                android:visibility="gone"
+                android:gravity="top"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_35dp">
+
+                <TextView
+                    android:id="@+id/tv_status_other"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/dimen_3dp"
+                    android:textSize="@dimen/dimen_13sp"
+                    android:textColor="@color/colorSkyBlue"
+                    android:text="@string/booking_confirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

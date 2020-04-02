@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="dimen_1dp" tools:ignore="MissingDefaultResource">1dp</dimen>
+    <dimen name="dimen_2dp" tools:ignore="MissingDefaultResource">2dp</dimen>
+    <dimen name="dimen_3dp" tools:ignore="MissingDefaultResource">3dp</dimen>
+    <dimen name="dimen_4dp" tools:ignore="MissingDefaultResource">4dp</dimen>
+    <dimen name="dimen_5dp" tools:ignore="MissingDefaultResource">5dp</dimen>
+    <dimen name="dimen_6dp" tools:ignore="MissingDefaultResource">6dp</dimen>
+    <dimen name="dimen_7dp" tools:ignore="MissingDefaultResource">7dp</dimen>
+    <dimen name="dimen_8dp" tools:ignore="MissingDefaultResource">8dp</dimen>
+    <dimen name="dimen_9dp" tools:ignore="MissingDefaultResource">9dp</dimen>
+    <dimen name="dimen_10dp" tools:ignore="MissingDefaultResource">10dp</dimen>
+    <dimen name="dimen_11dp" tools:ignore="MissingDefaultResource">11dp</dimen>
+    <dimen name="dimen_12dp" tools:ignore="MissingDefaultResource">12dp</dimen>
+    <dimen name="dimen_13dp" tools:ignore="MissingDefaultResource">13dp</dimen>
+    <dimen name="dimen_14dp" tools:ignore="MissingDefaultResource">14dp</dimen>
+    <dimen name="dimen_15dp" tools:ignore="MissingDefaultResource">15dp</dimen>
+    <dimen name="dimen_16dp" tools:ignore="MissingDefaultResource">16dp</dimen>
+    <dimen name="dimen_17dp" tools:ignore="MissingDefaultResource">17dp</dimen>
+    <dimen name="dimen_18dp" tools:ignore="MissingDefaultResource">18dp</dimen>
+    <dimen name="dimen_19dp" tools:ignore="MissingDefaultResource">19dp</dimen>
+    <dimen name="dimen_20dp" tools:ignore="MissingDefaultResource">20dp</dimen>
+    <dimen name="dimen_21dp" tools:ignore="MissingDefaultResource">21dp</dimen>
+    <dimen name="dimen_22dp" tools:ignore="MissingDefaultResource">22dp</dimen>
+    <dimen name="dimen_23dp" tools:ignore="MissingDefaultResource">23dp</dimen>
+    <dimen name="dimen_24dp" tools:ignore="MissingDefaultResource">24dp</dimen>
+    <dimen name="dimen_25dp" tools:ignore="MissingDefaultResource">25dp</dimen>
+    <dimen name="dimen_26dp" tools:ignore="MissingDefaultResource">26dp</dimen>
+    <dimen name="dimen_27dp" tools:ignore="MissingDefaultResource">27dp</dimen>
+    <dimen name="dimen_28dp" tools:ignore="MissingDefaultResource">28dp</dimen>
+    <dimen name="dimen_29dp" tools:ignore="MissingDefaultResource">29dp</dimen>
+    <dimen name="dimen_30dp" tools:ignore="MissingDefaultResource">30dp</dimen>
+    <dimen name="dimen_31dp" tools:ignore="MissingDefaultResource">31dp</dimen>
+    <dimen name="dimen_32dp" tools:ignore="MissingDefaultResource">32dp</dimen>
+    <dimen name="dimen_33dp" tools:ignore="MissingDefaultResource">33dp</dimen>
+    <dimen name="dimen_34dp" tools:ignore="MissingDefaultResource">34dp</dimen>
+    <dimen name="dimen_35dp" tools:ignore="MissingDefaultResource">35dp</dimen>
+    <dimen name="dimen_36dp" tools:ignore="MissingDefaultResource">36dp</dimen>
+    <dimen name="dimen_37dp" tools:ignore="MissingDefaultResource">37dp</dimen>
+    <dimen name="dimen_38dp" tools:ignore="MissingDefaultResource">38dp</dimen>
+    <dimen name="dimen_39dp" tools:ignore="MissingDefaultResource">39dp</dimen>
+    <dimen name="dimen_40dp" tools:ignore="MissingDefaultResource">40dp</dimen>
+    <dimen name="dimen_41dp" tools:ignore="MissingDefaultResource">41dp</dimen>
+    <dimen name="dimen_42dp" tools:ignore="MissingDefaultResource">42dp</dimen>
+    <dimen name="dimen_43dp" tools:ignore="MissingDefaultResource">43dp</dimen>
+    <dimen name="dimen_44dp" tools:ignore="MissingDefaultResource">44dp</dimen>
+    <dimen name="dimen_45dp" tools:ignore="MissingDefaultResource">45dp</dimen>
+    <dimen name="dimen_46dp" tools:ignore="MissingDefaultResource">46dp</dimen>
+    <dimen name="dimen_47dp" tools:ignore="MissingDefaultResource">47dp</dimen>
+    <dimen name="dimen_48dp" tools:ignore="MissingDefaultResource">48dp</dimen>
+    <dimen name="dimen_49dp" tools:ignore="MissingDefaultResource">49dp</dimen>
+    <dimen name="dimen_50dp" tools:ignore="MissingDefaultResource">50dp</dimen>
+    <dimen name="dimen_51dp" tools:ignore="MissingDefaultResource">51dp</dimen>
+    <dimen name="dimen_52dp" tools:ignore="MissingDefaultResource">52dp</dimen>
+    <dimen name="dimen_53dp" tools:ignore="MissingDefaultResource">53dp</dimen>
+    <dimen name="dimen_54dp" tools:ignore="MissingDefaultResource">54dp</dimen>
+    <dimen name="dimen_55dp" tools:ignore="MissingDefaultResource">55dp</dimen>
+    <dimen name="dimen_56dp" tools:ignore="MissingDefaultResource">56dp</dimen>
+    <dimen name="dimen_57dp" tools:ignore="MissingDefaultResource">57dp</dimen>
+    <dimen name="dimen_58dp" tools:ignore="MissingDefaultResource">58dp</dimen>
+    <dimen name="dimen_59dp" tools:ignore="MissingDefaultResource">59dp</dimen>
+    <dimen name="dimen_60dp" tools:ignore="MissingDefaultResource">60dp</dimen>
+    <dimen name="dimen_61dp" tools:ignore="MissingDefaultResource">61dp</dimen>
+    <dimen name="dimen_62dp" tools:ignore="MissingDefaultResource">62dp</dimen>
+    <dimen name="dimen_63dp" tools:ignore="MissingDefaultResource">63dp</dimen>
+    <dimen name="dimen_64dp" tools:ignore="MissingDefaultResource">64dp</dimen>
+    <dimen name="dimen_65dp" tools:ignore="MissingDefaultResource">65dp</dimen>
+    <dimen name="dimen_66dp" tools:ignore="MissingDefaultResource">66dp</dimen>
+    <dimen name="dimen_67dp" tools:ignore="MissingDefaultResource">67dp</dimen>
+    <dimen name="dimen_68dp" tools:ignore="MissingDefaultResource">68dp</dimen>
+    <dimen name="dimen_69dp" tools:ignore="MissingDefaultResource">69dp</dimen>
+    <dimen name="dimen_70dp" tools:ignore="MissingDefaultResource">70dp</dimen>
+    <dimen name="dimen_71dp" tools:ignore="MissingDefaultResource">71dp</dimen>
+    <dimen name="dimen_72dp" tools:ignore="MissingDefaultResource">72dp</dimen>
+    <dimen name="dimen_200sp" tools:ignore="MissingDefaultResource">200sp</dimen>
+
+
+
+
+    <dimen name="dimen_1sp" tools:ignore="MissingDefaultResource">1sp</dimen>
+    <dimen name="dimen_2sp" tools:ignore="MissingDefaultResource">2sp</dimen>
+    <dimen name="dimen_3sp" tools:ignore="MissingDefaultResource">3sp</dimen>
+    <dimen name="dimen_4sp" tools:ignore="MissingDefaultResource">4sp</dimen>
+    <dimen name="dimen_5sp" tools:ignore="MissingDefaultResource">5sp</dimen>
+    <dimen name="dimen_6sp" tools:ignore="MissingDefaultResource">6sp</dimen>
+    <dimen name="dimen_7sp" tools:ignore="MissingDefaultResource">7sp</dimen>
+    <dimen name="dimen_8sp" tools:ignore="MissingDefaultResource">8sp</dimen>
+    <dimen name="dimen_9sp" tools:ignore="MissingDefaultResource">9sp</dimen>
+    <dimen name="dimen_10sp" tools:ignore="MissingDefaultResource">10sp</dimen>
+    <dimen name="dimen_11sp" tools:ignore="MissingDefaultResource">11sp</dimen>
+    <dimen name="dimen_12sp" tools:ignore="MissingDefaultResource">12sp</dimen>
+    <dimen name="dimen_13sp" tools:ignore="MissingDefaultResource">13sp</dimen>
+    <dimen name="dimen_14sp" tools:ignore="MissingDefaultResource">14sp</dimen>
+    <dimen name="dimen_15sp" tools:ignore="MissingDefaultResource">15sp</dimen>
+    <dimen name="dimen_16sp" tools:ignore="MissingDefaultResource">16sp</dimen>
+    <dimen name="dimen_17sp" tools:ignore="MissingDefaultResource">17sp</dimen>
+    <dimen name="dimen_18sp" tools:ignore="MissingDefaultResource">18sp</dimen>
+    <dimen name="dimen_19sp" tools:ignore="MissingDefaultResource">19sp</dimen>
+    <dimen name="dimen_20sp" tools:ignore="MissingDefaultResource">20sp</dimen>
+    <dimen name="dimen_21sp" tools:ignore="MissingDefaultResource">21sp</dimen>
+    <dimen name="dimen_22sp" tools:ignore="MissingDefaultResource">22sp</dimen>
+    <dimen name="dimen_23sp" tools:ignore="MissingDefaultResource">23sp</dimen>
+    <dimen name="dimen_24sp" tools:ignore="MissingDefaultResource">24sp</dimen>
+    <dimen name="dimen_25sp" tools:ignore="MissingDefaultResource">25sp</dimen>
+    <dimen name="dimen_26sp" tools:ignore="MissingDefaultResource">26sp</dimen>
+    <dimen name="dimen_27sp" tools:ignore="MissingDefaultResource">27sp</dimen>
+    <dimen name="dimen_28sp" tools:ignore="MissingDefaultResource">28sp</dimen>
+    <dimen name="dimen_29sp" tools:ignore="MissingDefaultResource">29sp</dimen>
+    <dimen name="dimen_30sp" tools:ignore="MissingDefaultResource">30sp</dimen>
+    <dimen name="dimen_31sp" tools:ignore="MissingDefaultResource">31sp</dimen>
+    <dimen name="dimen_32sp" tools:ignore="MissingDefaultResource">32sp</dimen>
+    <dimen name="dimen_33sp" tools:ignore="MissingDefaultResource">33sp</dimen>
+    <dimen name="dimen_34sp" tools:ignore="MissingDefaultResource">34sp</dimen>
+    <dimen name="dimen_35sp" tools:ignore="MissingDefaultResource">35sp</dimen>
+    <dimen name="dimen_36sp" tools:ignore="MissingDefaultResource">36sp</dimen>
+    <dimen name="dimen_37sp" tools:ignore="MissingDefaultResource">37sp</dimen>
+    <dimen name="dimen_38sp" tools:ignore="MissingDefaultResource">38sp</dimen>
+    <dimen name="dimen_39sp" tools:ignore="MissingDefaultResource">39sp</dimen>
+    <dimen name="dimen_40sp" tools:ignore="MissingDefaultResource">40sp</dimen>
+    <dimen name="dimen_41sp" tools:ignore="MissingDefaultResource">41sp</dimen>
+    <dimen name="dimen_42sp" tools:ignore="MissingDefaultResource">42sp</dimen>
+    <dimen name="dimen_43sp" tools:ignore="MissingDefaultResource">43sp</dimen>
+    <dimen name="dimen_44sp" tools:ignore="MissingDefaultResource">44sp</dimen>
+    <dimen name="dimen_45sp" tools:ignore="MissingDefaultResource">45sp</dimen>
+    <dimen name="dimen_46sp" tools:ignore="MissingDefaultResource">46sp</dimen>
+    <dimen name="dimen_47sp" tools:ignore="MissingDefaultResource">47sp</dimen>
+    <dimen name="dimen_48sp" tools:ignore="MissingDefaultResource">48sp</dimen>
+    <dimen name="dimen_49sp" tools:ignore="MissingDefaultResource">49sp</dimen>
+    <dimen name="dimen_50sp" tools:ignore="MissingDefaultResource">50sp</dimen>
+    <dimen name="dimen_51sp" tools:ignore="MissingDefaultResource">51sp</dimen>
+    <dimen name="dimen_52sp" tools:ignore="MissingDefaultResource">52sp</dimen>
+    <dimen name="dimen_53sp" tools:ignore="MissingDefaultResource">53sp</dimen>
+    <dimen name="dimen_54sp" tools:ignore="MissingDefaultResource">54sp</dimen>
+    <dimen name="dimen_55sp" tools:ignore="MissingDefaultResource">55sp</dimen>
+    <dimen name="dimen_56sp" tools:ignore="MissingDefaultResource">56sp</dimen>
+    <dimen name="dimen_57sp" tools:ignore="MissingDefaultResource">57sp</dimen>
+    <dimen name="dimen_58sp" tools:ignore="MissingDefaultResource">58sp</dimen>
+    <dimen name="dimen_59sp" tools:ignore="MissingDefaultResource">59sp</dimen>
+    <dimen name="dimen_60sp" tools:ignore="MissingDefaultResource">60sp</dimen>
+    <dimen name="dimen_61sp" tools:ignore="MissingDefaultResource">61sp</dimen>
+    <dimen name="dimen_62sp" tools:ignore="MissingDefaultResource">62sp</dimen>
+    <dimen name="dimen_63sp" tools:ignore="MissingDefaultResource">63sp</dimen>
+    <dimen name="dimen_64sp" tools:ignore="MissingDefaultResource">64sp</dimen>
+    <dimen name="dimen_65sp" tools:ignore="MissingDefaultResource">65sp</dimen>
+    <dimen name="dimen_66sp" tools:ignore="MissingDefaultResource">66sp</dimen>
+    <dimen name="dimen_67sp" tools:ignore="MissingDefaultResource">67sp</dimen>
+    <dimen name="dimen_68sp" tools:ignore="MissingDefaultResource">68sp</dimen>
+    <dimen name="dimen_69sp" tools:ignore="MissingDefaultResource">69sp</dimen>
+    <dimen name="dimen_70sp" tools:ignore="MissingDefaultResource">70sp</dimen>
+    <dimen name="dimen_71sp" tools:ignore="MissingDefaultResource">71sp</dimen>
+    <dimen name="dimen_72sp" tools:ignore="MissingDefaultResource">72sp</dimen>
+
+
+    <dimen name="dimen_80dp">80dp</dimen>
+    <dimen name="dimen_100dp">100dp</dimen>
+    <dimen name="dimen_90dp">90dp</dimen>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="dimen_heading">18sp</dimen>
+    <dimen name="dimen_sub_heading">16sp</dimen>
+    <dimen name="dimen_title">14sp</dimen>
+
+<dimen name="createlt_lt_heading">14sp</dimen>
+    <dimen name="dimen_120dp">120dp</dimen>
+    <dimen name="create_lt_text">13sp</dimen>
+    <dimen name="dimen_create_lt_text">13sp</dimen>
+    <dimen name="dimen_cl_etbox">40dp</dimen>
+    <dimen name="dimen_cllstbt13sp">13sp</dimen>
+    <dimen name="dimen_cllst_cbh30dp">30dp</dimen>
+    <dimen name="dimen_iv_cb_20dp">20dp</dimen>
+    <dimen name="dimen_cl_cbtext_14sp">14sp</dimen>
+    <dimen name="dimen_cl_cbtext_10sp">10sp</dimen>
+    <dimen name="dimen_cl_cbtext_12sp">12sp</dimen>
+
+<dimen name="dimen_250dp">250dp</dimen>
+    <dimen name="dimen_300dp">300dp</dimen>
+    <dimen name="dimen_0dp">0dp</dimen>
+    <dimen name="dimen_200dp">200dp</dimen>
+
+    <dimen name="margin_10">10dp</dimen>
+
+
+
+
+
+
+    <dimen name="dimen_251dp">250dp</dimen>
+    <dimen name="dimen_301dp">300dp</dimen>
+    <dimen name="dimen_0111dp">0dp</dimen>
+    <dimen name="dimen_201dp">200dp</dimen>
+    <dimen name="dimen_1201dp">120dp</dimen>
+    <dimen name="dimen_215dp">215dp</dimen>
+    <dimen name="dimen_225dp">225dp</dimen>
+    <dimen name="dimen_240dp">240dp</dimen>
+    <dimen name="dimen_230dp">230dp</dimen>
+    <dimen name="dimen_180dp">180dp</dimen>
+
+
+
+
+
+    <dimen name="margin_05">05dp</dimen>
+    <dimen name="margin_15">15dp</dimen>
+    <dimen name="margin_18">18dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <dimen name="margin_25">25dp</dimen>
+    <dimen name="margin_30">30dp</dimen>
+    <dimen name="margin_50">50dp</dimen>
+
+
+    <dimen name="padding_05">05dp</dimen>
+    <dimen name="padding_10">10dp</dimen>
+    <dimen name="padding_15">15dp</dimen>
+    <dimen name="padding_18">18dp</dimen>
+    <dimen name="padding_20">20dp</dimen>
+    <dimen name="padding_25">25dp</dimen>
+    <dimen name="padding_30">30dp</dimen>
+    <dimen name="padding_50">50dp</dimen>
+    <dimen name="padding_56">56dp</dimen>
+    <dimen name="padding_60">60dp</dimen>
+    <dimen name="padding_70">70dp</dimen>
+
+
+    <dimen name="title_heading_x">24sp</dimen>
+    <dimen name="title_heading_xx">28sp</dimen>
+    <dimen name="title_heading_xxx">32sp</dimen>
+    <dimen name="font_size_regular">16sp</dimen>
+    <dimen name="font_size_heading">18sp</dimen>
+    <dimen name="font_size_toolbar">16sp</dimen>
+
+    <dimen name="font_size_12">12sp</dimen>
+    <dimen name="font_size_14">14sp</dimen>
+    <dimen name="font_size_16">16sp</dimen>
+    <dimen name="font_size_18">18sp</dimen>
+    <dimen name="font_size_20">20sp</dimen>
+    <dimen name="font_size_22">22sp</dimen>
+    <dimen name="font_size_24">24sp</dimen>
+
+    <dimen name="margin_bottom_for_all_fragments">100dp</dimen>
+    <dimen name="button_text_size">14dp</dimen>
+    <dimen name="button_size">40dp</dimen>
+
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <dimen name="dots_height">30dp</dimen>
+    <dimen name="dots_margin_bottom">20dp</dimen>
+    <dimen name="img_width_height">120dp</dimen>
+    <dimen name="slide_title">30dp</dimen>
+    <dimen name="slide_desc">16dp</dimen>
+    <dimen name="desc_padding">40dp</dimen>
+    <dimen name="margin_40">40dp</dimen>
+    <dimen name="dimens_30">30dp</dimen>
+
+
+
+</resources>

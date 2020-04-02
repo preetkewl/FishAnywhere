@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+
+
+    <include
+        layout="@layout/appbar_create_listing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:id="@+id/shadow"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_5dp"
+        android:background="@color/shadow_line"/>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <include
+
+                    layout="@layout/top_layout_createlisting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+                <View
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_1dp"
+                    android:background="@color/login_text_grey"
+
+                    />
+
+
+                <LinearLayout
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+                    android:layout_marginRight="@dimen/dimen_20dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+                    <TextView
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:id="@+id/tv_boat_type"
+                        android:text="@string/boattype"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/createlt_lt_heading"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"
+
+                        />
+
+                    <EditText
+                        android:maxLines="1"
+                        android:padding="@dimen/dimen_10dp"
+                        android:id="@+id/et_boat_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_cl_etbox"
+                        android:layout_marginTop="@dimen/dimen_5dp"
+                        android:background="@drawable/selector_edittext_createlisting"
+                        android:inputType="textPersonName"
+                        />
+
+
+                    <TextView
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:id="@+id/tv_boat_captain"
+                        android:text="@string/boatcaptain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/createlt_lt_heading"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"
+
+                        />
+
+                    <EditText
+                        android:maxLines="1"
+                        android:padding="@dimen/dimen_10dp"
+                        android:id="@+id/et_boat_captain"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_cl_etbox"
+                        android:layout_marginTop="@dimen/dimen_5dp"
+                        android:background="@drawable/selector_edittext_createlisting"
+                        android:inputType="textPersonName"
+                        />
+
+                    <TextView
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:id="@+id/tv_boat_length"
+                        android:text="@string/boatlength"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/createlt_lt_heading"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"
+
+                        />
+
+                    <EditText
+                        android:maxLines="1"
+                        android:padding="@dimen/dimen_10dp"
+                        android:id="@+id/et_boat_length"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_cl_etbox"
+                        android:layout_marginTop="@dimen/dimen_5dp"
+                        android:background="@drawable/selector_edittext_createlisting"
+                        android:inputType="textPersonName"
+                        />
+
+                    <TextView
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:id="@+id/tv_year_built"
+                        android:text="@string/yearbuilt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/createlt_lt_heading"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"
+
+                        />
+
+                    <EditText
+                        android:maxLines="1"
+                        android:padding="@dimen/dimen_10dp"
+                        android:id="@+id/et_year_built"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_cl_etbox"
+                        android:layout_marginTop="@dimen/dimen_5dp"
+                        android:background="@drawable/selector_edittext_createlisting"
+                        android:inputType="textPersonName"
+                        />
+
+                    <TextView
+
+                        android:text="@string/boatinfo_builtyr_hint"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/dimen_create_lt_text"
+                        android:textStyle="italic"
+                        android:textColor="@color/createlt_info"
+
+                        />
+
+                    <TextView
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:id="@+id/tv_engine_manufacturer"
+                        android:text="@string/enginemanufacturer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/createlt_lt_heading"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"
+
+                        />
+
+                    <EditText
+                        android:maxLines="1"
+                        android:padding="@dimen/dimen_10dp"
+                        android:id="@+id/et_engine_manufacturer"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_cl_etbox"
+                        android:layout_marginTop="@dimen/dimen_5dp"
+                        android:background="@drawable/selector_edittext_createlisting"
+                        android:inputType="textPersonName"
+                        />
+
+                    <TextView
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:id="@+id/tv_numberof_engines"
+                        android:text="@string/numberofengines"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/createlt_lt_heading"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"
+
+                        />
+
+                    <EditText
+                        android:maxLines="1"
+                        android:padding="@dimen/dimen_10dp"
+                        android:id="@+id/et_numberof_engines"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_cl_etbox"
+                        android:layout_marginTop="@dimen/dimen_5dp"
+                        android:background="@drawable/selector_edittext_createlisting"
+                        android:inputType="textPersonName"
+                        />
+
+                    <TextView
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:id="@+id/tv_horsepower_per_engine"
+                        android:text="@string/horsepowerperengine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/createlt_lt_heading"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"
+
+                        />
+
+                    <EditText
+                        android:maxLines="1"
+                        android:padding="@dimen/dimen_10dp"
+                        android:id="@+id/et_horsepower_per_engine"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_cl_etbox"
+                        android:layout_marginTop="@dimen/dimen_5dp"
+                        android:background="@drawable/selector_edittext_createlisting"
+                        android:inputType="textPersonName"
+                        />
+
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:background="@drawable/panggge"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_40dp"/>
+
+            <LinearLayout
+
+                android:gravity="center"
+                android:background="@drawable/info_bg_middle"
+                android:weightSum="3.8"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_80dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight=".2"
+                    android:layout_height="wrap_content"/>
+                <Button
+                    android:drawablePadding="@dimen/dimen_8dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:padding="@dimen/dimen_10dp"
+                    android:drawableLeft="@drawable/ic_crt_lt_previus_bt"
+                    android:id="@+id/bt_boatinfo_previous"
+                    android:textSize="@dimen/dimen_cllstbt13sp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/dimen_45dp"
+                    android:background="@drawable/selector_bt_crt_lt_prv"
+                    android:text="@string/previous"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight=".2"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:drawablePadding="@dimen/dimen_8dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:id="@+id/bt_boatinfo_next"
+                    android:drawableRight="@drawable/ic_cl_next_bt"
+                    android:paddingRight="@dimen/dimen_10dp"
+                    android:textSize="@dimen/dimen_cllstbt13sp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/dimen_45dp"
+                    android:background="@drawable/selector_button_createlist"
+                    android:text="@string/next"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight=".2"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:fontFamily="sans-serif-medium"
+                    android:textSize="@dimen/dimen_cllstbt13sp"
+                    android:id="@+id/bt_boatinfo_save_exit"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/dimen_45dp"
+                    android:background="@drawable/selector_button_createlist"
+                    android:text="@string/saveexit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight=".2"
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+
+</LinearLayout>

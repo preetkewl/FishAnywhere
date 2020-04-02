@@ -1,0 +1,2247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@color/colorWhite"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.activity.SignupActivity">
+
+
+    <LinearLayout
+        android:background="#1B6C96"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="160dp">
+
+        <RelativeLayout
+            android:layout_marginLeft="@dimen/dimen_20dp"
+            android:id="@+id/rl_back_icon"
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+            <ImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/iv_back"
+                android:tint="@color/colorWhite"
+                android:src="@drawable/ic_back"
+                android:layout_width="@dimen/dimen_24dp"
+                android:layout_height="@dimen/dimen_24dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="@dimen/dimen_20dp"
+            android:layout_below="@+id/rl_back_icon"
+            android:id="@+id/rl_sign"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_25dp">
+
+            <TextView
+
+                android:id="@+id/tv_sendreviews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Capt_john_smith"
+                android:textSize="@dimen/dimen_20sp"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                />
+
+
+            <LinearLayout
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/selector_button"
+                android:layout_width="@dimen/dimen_60dp"
+                android:layout_height="@dimen/dimen_40dp">
+                <ImageView
+                    android:src="@drawable/ic_edit_white"
+                    android:layout_width="@dimen/dimen_20dp"
+                    android:layout_height="@dimen/dimen_20dp"/>
+                <TextView
+                    android:layout_marginLeft="@dimen/dimen_3dp"
+                    android:textSize="@dimen/dimen_15dp"
+                    android:textColor="@color/colorWhite"
+                    android:text="Edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:layout_marginLeft="@dimen/dimen_20dp"
+            android:layout_below="@+id/rl_sign"
+            android:id="@+id/rl_profile_location"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_25dp">
+
+        <LinearLayout
+            android:id="@+id/ll_location"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_40dp">
+            <ImageView
+                android:src="@drawable/ic_location"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen_20dp"/>
+            <TextView
+                android:layout_marginLeft="@dimen/dimen_3dp"
+                android:textSize="@dimen/dimen_15dp"
+                android:textColor="@color/colorWhite"
+                android:text="@string/location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginLeft="@dimen/dimen_40dp"
+                android:layout_toRightOf="@+id/ll_location"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen_40dp">
+                <ImageView
+                    android:src="@drawable/ic_profile_tick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dimen_20dp"/>
+                <TextView
+                    android:layout_marginLeft="@dimen/dimen_3dp"
+                    android:textSize="@dimen/dimen_15dp"
+                    android:textColor="@color/colorWhite"
+                    android:text="@string/incorporated_licensed_Insured"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@drawable/send_reviews_top_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_40dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/main_layout"
+            android:layout_marginLeft="@dimen/dimen_20dp"
+            android:layout_marginRight="@dimen/dimen_20dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+
+
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:background="@color/fishing_photo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_180dp">
+
+                <ImageView
+                    android:src="@drawable/uploaded_photo_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <Button
+android:layout_marginTop="@dimen/dimen_15dp"
+                android:id="@+id/bt_submit"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/selector_button_createlist"
+                android:textColor="@color/colorWhite"
+                android:textAllCaps="false"
+                android:text="@string/see_all_photos"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"/>
+
+
+            <TextView
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:text="@string/here_journey_subheading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/dimen_create_lt_text"
+                android:textColor="@color/colorBlack"
+
+                />
+
+            <TextView
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/this_trip_catch"
+                android:textSize="@dimen/dimen_15sp"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                android:layout_width="match_parent" />
+
+            <View
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1dp"
+                android:background="@color/login_text_grey"
+
+                />
+
+            <LinearLayout
+                android:weightSum="5"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:weightSum="1"
+                    android:layout_marginRight="@dimen/dimen_20dp"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+                    android:paddingTop="@dimen/dimen_20dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_weight=".5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:src="@drawable/ic_fish_photo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"/>
+
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_5dp"
+                            android:text="@string/banded_rudderfish"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/dimen_8sp"
+                            android:textColor="@color/colorBlack"
+
+                            />
+
+                    </LinearLayout>
+
+
+
+
+                    <LinearLayout
+                        android:layout_weight=".5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:src="@drawable/ic_fish_photo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"/>
+
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_5dp"
+                            android:text="@string/black_grouper"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/dimen_10sp"
+                            android:textColor="@color/colorBlack"
+
+                            />
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginRight="@dimen/dimen_20dp"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+                    android:layout_marginTop="@dimen/dimen_20dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_weight=".5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:src="@drawable/ic_fish_photo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"/>
+
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_5dp"
+                            android:text="@string/blue_merlin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/dimen_10sp"
+                            android:textColor="@color/colorBlack"
+
+                            />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_weight=".5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_weight=".5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:src="@drawable/ic_fish_photo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"/>
+
+                            <TextView
+                                android:layout_marginLeft="@dimen/dimen_5dp"
+                                android:text="@string/bone_fish"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/dimen_10sp"
+                                android:textColor="@color/colorBlack"
+
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginRight="@dimen/dimen_20dp"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+                    android:layout_marginTop="@dimen/dimen_20dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_weight=".5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:src="@drawable/ic_fish_photo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"/>
+
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_5dp"
+                            android:text="@string/brook_trout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/dimen_10sp"
+                            android:textColor="@color/colorBlack"
+
+                            />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_weight=".5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_weight=".5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:src="@drawable/ic_fish_photo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"/>
+
+                            <TextView
+                                android:layout_marginLeft="@dimen/dimen_5dp"
+                                android:text="@string/halibut"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/dimen_10sp"
+                                android:textColor="@color/colorBlack"
+
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginRight="@dimen/dimen_20dp"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+                    android:layout_marginTop="@dimen/dimen_20dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_weight=".5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:src="@drawable/ic_fish_photo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"/>
+
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_5dp"
+                            android:text="@string/lake_trout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/dimen_10sp"
+                            android:textColor="@color/colorBlack"
+
+                            />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_weight=".5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_weight=".5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:src="@drawable/ic_fish_photo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"/>
+
+                            <TextView
+                                android:layout_marginLeft="@dimen/dimen_5dp"
+                                android:text="@string/berracude"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/dimen_10sp"
+                                android:textColor="@color/colorBlack"
+
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginRight="@dimen/dimen_20dp"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+                    android:layout_marginTop="@dimen/dimen_20dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_weight=".5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:src="@drawable/ic_fish_photo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"/>
+
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_5dp"
+                            android:text="@string/gar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/dimen_10sp"
+                            android:textColor="@color/colorBlack"
+
+                            />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_weight=".5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_weight=".5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:src="@drawable/ic_fish_photo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"/>
+
+                            <TextView
+                                android:layout_marginLeft="@dimen/dimen_5dp"
+                                android:text="@string/bluefish"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/dimen_10sp"
+                                android:textColor="@color/colorBlack"
+
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/launch_location"
+                android:textSize="@dimen/dimen_15sp"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                android:layout_width="match_parent" />
+
+            <View
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1dp"
+                android:background="@color/login_text_grey"
+
+                />
+
+
+            <TextView
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:text="@string/loc_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/dimen_create_lt_text"
+                android:textColor="@color/colorBlack"
+
+                />
+
+            <TextView
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:text="@string/contact_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/dimen_create_lt_text"
+                android:textColor="@color/colorBlack"
+
+                />
+
+            <LinearLayout
+                android:background="@drawable/dummy_map_bg"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:layout_width="match_parent"
+                android:layout_height="260dp">
+
+
+
+
+
+
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/trips"
+                android:textSize="@dimen/dimen_15sp"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                android:layout_width="match_parent" />
+
+            <View
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1dp"
+                android:background="@color/login_text_grey"
+
+                />
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:text="@string/trips_start_at"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dimen_create_lt_text"
+            android:textColor="@color/colorBlack"
+
+            />
+
+        <TextView
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:text="2 Trips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dimen_create_lt_text"
+            android:textColor="@color/colorBlack"
+
+            />
+        <TextView
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:text="4-4 guests"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dimen_create_lt_text"
+            android:textColor="@color/colorBlack"
+
+            />
+
+    </LinearLayout>
+
+    <Button
+
+       android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/selector_button_createlist"
+        android:textColor="@color/colorWhite"
+        android:textAllCaps="false"
+        android:text="@string/see_available_trips"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>
+
+
+            <TextView
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/boat_info"
+                android:textSize="@dimen/dimen_15sp"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                android:layout_width="match_parent" />
+
+            <View
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1dp"
+                android:background="@color/login_text_grey"
+
+                />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:text="@string/boat_engine_built"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/dimen_create_lt_text"
+                android:textColor="@color/colorBlack"
+
+                />
+
+            <TextView
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:text="@string/boat_engine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/dimen_create_lt_text"
+                android:textColor="@color/colorBlack"
+
+                />
+
+            <TextView
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:text="GPS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/dimen_create_lt_text"
+                android:textColor="@color/colorBlack"
+
+                />
+            <TextView
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:text="Fishfinder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/dimen_create_lt_text"
+                android:textColor="@color/colorBlack"
+
+                />
+
+            <View
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1dp"
+                android:background="@color/login_text_grey"
+
+                />
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/ic_profile_green_tick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dimen_20dp"/>
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_marginLeft="@dimen/dimen_3dp"
+                    android:textSize="@dimen/dimen_15dp"
+                    android:textColor="@color/colorBlack"
+                    android:text="@string/children_welcome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/ic_profile_green_tick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dimen_20dp"/>
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_marginLeft="@dimen/dimen_3dp"
+                    android:textSize="@dimen/dimen_15dp"
+                    android:textColor="@color/colorBlack"
+                    android:text="@string/clients_keep_catch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/latest_fishing_report"
+                android:textSize="@dimen/dimen_15sp"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                android:layout_width="match_parent" />
+
+            <View
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1dp"
+                android:background="@color/login_text_grey"
+
+                />
+
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:weightSum="2"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="horizontal"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:background="@drawable/shape_reactangle_border"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:padding="@dimen/dimen_5dp"
+                        android:gravity="center"
+                        android:background="@color/colorLightBlue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:padding="@dimen/dimen_5dp"
+                            android:layout_centerInParent="true"
+                            android:visibility="visible"
+                            android:src="@drawable/uploaded_photo_bg"
+                            android:layout_width="@dimen/dimen_60dp"
+                            android:layout_height="@dimen/dimen_60dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <TextView
+                            android:textStyle="bold"
+                            android:textSize="@dimen/dimen_15dp"
+                            android:textColor="@color/colorBlack"
+                            android:text="@string/here_is_our_journey"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/dimen_12dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            />
+
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:background="@drawable/shape_reactangle_border"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:padding="@dimen/dimen_5dp"
+                        android:gravity="center"
+                        android:background="@color/colorLightBlue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:padding="@dimen/dimen_5dp"
+                            android:layout_centerInParent="true"
+                            android:visibility="visible"
+                            android:src="@drawable/uploaded_photo_bg"
+                            android:layout_width="@dimen/dimen_60dp"
+                            android:layout_height="@dimen/dimen_60dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <TextView
+                            android:textStyle="bold"
+                            android:textSize="@dimen/dimen_15dp"
+                            android:textColor="@color/colorBlack"
+                            android:text="@string/here_is_our_journey"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/dimen_12dp"
+                            android:id="@+id/see_more2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            />
+
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+            <Button
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:background="@drawable/selector_button_createlist"
+                android:textColor="@color/colorWhite"
+                android:textAllCaps="false"
+                android:text="@string/see_more"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/fish_species"
+                android:textSize="@dimen/dimen_15sp"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                android:layout_width="match_parent" />
+
+            <View
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1dp"
+                android:background="@color/login_text_grey"
+
+                />
+
+            <LinearLayout
+                android:weightSum="5"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:weightSum="1"
+                    android:layout_marginRight="@dimen/dimen_20dp"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+                    android:layout_marginTop="@dimen/dimen_20dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_weight=".5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:src="@drawable/ic_fish_photo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"/>
+
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_5dp"
+                            android:text="@string/banded_rudderfish"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/dimen_10sp"
+                            android:textColor="@color/colorBlack"
+
+                            />
+
+                    </LinearLayout>
+
+
+
+
+                    <LinearLayout
+                        android:layout_weight=".5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:src="@drawable/ic_fish_photo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"/>
+
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_5dp"
+                            android:text="@string/black_grouper"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/dimen_10sp"
+                            android:textColor="@color/colorBlack"
+
+                            />
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginRight="@dimen/dimen_20dp"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+                    android:layout_marginTop="@dimen/dimen_20dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_weight=".5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:src="@drawable/ic_fish_photo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"/>
+
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_5dp"
+                            android:text="@string/blue_merlin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/dimen_10sp"
+                            android:textColor="@color/colorBlack"
+
+                            />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_weight=".5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_weight=".5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:src="@drawable/ic_fish_photo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"/>
+
+                            <TextView
+                                android:layout_marginLeft="@dimen/dimen_5dp"
+                                android:text="@string/bone_fish"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/dimen_10sp"
+                                android:textColor="@color/colorBlack"
+
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginRight="@dimen/dimen_20dp"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+                    android:layout_marginTop="@dimen/dimen_20dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_weight=".5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:src="@drawable/ic_fish_photo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"/>
+
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_5dp"
+                            android:text="@string/brook_trout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/dimen_10sp"
+                            android:textColor="@color/colorBlack"
+
+                            />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_weight=".5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_weight=".5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:src="@drawable/ic_fish_photo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"/>
+
+                            <TextView
+                                android:layout_marginLeft="@dimen/dimen_5dp"
+                                android:text="@string/halibut"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/dimen_10sp"
+                                android:textColor="@color/colorBlack"
+
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginRight="@dimen/dimen_20dp"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+                    android:layout_marginTop="@dimen/dimen_20dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_weight=".5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:src="@drawable/ic_fish_photo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"/>
+
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_5dp"
+                            android:text="@string/lake_trout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/dimen_10sp"
+                            android:textColor="@color/colorBlack"
+
+                            />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_weight=".5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_weight=".5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:src="@drawable/ic_fish_photo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"/>
+
+                            <TextView
+                                android:layout_marginLeft="@dimen/dimen_5dp"
+                                android:text="@string/berracude"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/dimen_10sp"
+                                android:textColor="@color/colorBlack"
+
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginRight="@dimen/dimen_20dp"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+                    android:layout_marginTop="@dimen/dimen_20dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_weight=".5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:src="@drawable/ic_fish_photo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"/>
+
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_5dp"
+                            android:text="@string/gar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/dimen_10sp"
+                            android:textColor="@color/colorBlack"
+
+                            />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_weight=".5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_weight=".5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:src="@drawable/ic_fish_photo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"/>
+
+                            <TextView
+                                android:layout_marginLeft="@dimen/dimen_5dp"
+                                android:text="@string/bluefish"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/dimen_10sp"
+                                android:textColor="@color/colorBlack"
+
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/additional_details"
+                android:textSize="@dimen/dimen_15sp"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                android:layout_width="match_parent" />
+
+            <View
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1dp"
+                android:background="@color/login_text_grey"
+
+                />
+
+            <LinearLayout
+                android:orientation="horizontal"
+               android:weightSum="3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_3dp"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:textColor="@color/colorBlack"
+                            android:text="@string/safety_features"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/ic_profile_green_tick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dimen_20dp"/>
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_3dp"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:textColor="@color/colorBlack"
+                            android:text="@string/safety_features"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/ic_profile_green_tick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dimen_20dp"/>
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_3dp"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:textColor="@color/colorBlack"
+                            android:text="@string/safety_features"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/ic_profile_green_tick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dimen_20dp"/>
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_3dp"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:textColor="@color/colorBlack"
+                            android:text="@string/safety_features"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/ic_profile_green_tick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dimen_20dp"/>
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_3dp"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:textColor="@color/colorBlack"
+                            android:text="@string/safety_features"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/ic_profile_green_tick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dimen_20dp"/>
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_3dp"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:textColor="@color/colorBlack"
+                            android:text="@string/safety_features"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_3dp"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:textColor="@color/colorBlack"
+                            android:text="@string/safety_features"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/ic_profile_green_tick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dimen_20dp"/>
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_3dp"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:textColor="@color/colorBlack"
+                            android:text="@string/safety_features"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/ic_profile_green_tick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dimen_20dp"/>
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_3dp"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:textColor="@color/colorBlack"
+                            android:text="@string/safety_features"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_3dp"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:textColor="@color/colorBlack"
+                            android:text="@string/safety_features"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/ic_profile_green_tick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dimen_20dp"/>
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_3dp"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:textColor="@color/colorBlack"
+                            android:text="@string/safety_features"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textStyle="bold"
+                            android:layout_marginLeft="@dimen/dimen_3dp"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:textColor="@color/colorBlack"
+                            android:text="@string/boat_gear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/ic_profile_green_tick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dimen_20dp"/>
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_3dp"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:textColor="@color/colorBlack"
+                            android:text="@string/safety_features"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/ic_profile_green_tick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dimen_20dp"/>
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_3dp"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:textColor="@color/colorBlack"
+                            android:text="@string/safety_features"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textStyle="bold"
+                            android:layout_marginLeft="@dimen/dimen_3dp"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:textColor="@color/colorBlack"
+                            android:text="@string/fishing_tech"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/ic_profile_green_tick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dimen_20dp"/>
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_3dp"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:textColor="@color/colorBlack"
+                            android:text="@string/safety_features"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/ic_profile_green_tick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dimen_20dp"/>
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_3dp"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:textColor="@color/colorBlack"
+                            android:text="@string/safety_features"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/ic_profile_green_tick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dimen_20dp"/>
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_3dp"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:textColor="@color/colorBlack"
+                            android:text="@string/safety_features"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/ic_profile_green_tick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dimen_20dp"/>
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_3dp"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:textColor="@color/colorBlack"
+                            android:text="@string/safety_features"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textStyle="bold"
+                            android:layout_marginLeft="@dimen/dimen_3dp"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:textColor="@color/colorBlack"
+                            android:text="@string/fishing_policies"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/ic_profile_green_tick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dimen_20dp"/>
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_3dp"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:textColor="@color/colorBlack"
+                            android:text="@string/safety_features"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/ic_profile_green_tick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dimen_20dp"/>
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_3dp"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:textColor="@color/colorBlack"
+                            android:text="@string/safety_features"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/ic_profile_green_tick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dimen_20dp"/>
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_3dp"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:textColor="@color/colorBlack"
+                            android:text="@string/safety_features"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textStyle="bold"
+                            android:layout_marginLeft="@dimen/dimen_3dp"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:textColor="@color/colorBlack"
+                            android:text="@string/price_includes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/ic_profile_green_tick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dimen_20dp"/>
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_3dp"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:textColor="@color/colorBlack"
+                            android:text="@string/safety_features"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/ic_profile_green_tick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dimen_20dp"/>
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_3dp"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:textColor="@color/colorBlack"
+                            android:text="@string/safety_features"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/ic_profile_green_tick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dimen_20dp"/>
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_3dp"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:textColor="@color/colorBlack"
+                            android:text="@string/safety_features"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/ic_profile_green_tick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dimen_20dp"/>
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_3dp"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:textColor="@color/colorBlack"
+                            android:text="@string/safety_features"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textStyle="bold"
+                            android:layout_marginLeft="@dimen/dimen_3dp"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:textColor="@color/colorBlack"
+                            android:text="@string/fishing_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/ic_profile_green_tick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dimen_20dp"/>
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_3dp"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:textColor="@color/colorBlack"
+                            android:text="@string/safety_features"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/ic_profile_green_tick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dimen_20dp"/>
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_3dp"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:textColor="@color/colorBlack"
+                            android:text="@string/safety_features"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/ic_profile_green_tick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dimen_20dp"/>
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_3dp"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:textColor="@color/colorBlack"
+                            android:text="@string/safety_features"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/about_the_vessel"
+                android:textSize="@dimen/dimen_15sp"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                android:layout_width="match_parent" />
+
+            <View
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1dp"
+                android:background="@color/login_text_grey"
+
+                />
+
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textStyle="bold"
+                            android:layout_marginLeft="@dimen/dimen_3dp"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:textColor="@color/colorBlack"
+                            android:text="@string/boattype"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_3dp"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:textColor="@color/colorBlack"
+                            android:text="@string/bay_boat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textStyle="bold"
+                            android:layout_marginLeft="@dimen/dimen_3dp"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:textColor="@color/colorBlack"
+                            android:text="@string/boatlength"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_3dp"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:textColor="@color/colorBlack"
+                            android:text="18"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textStyle="bold"
+                            android:layout_marginLeft="@dimen/dimen_3dp"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:textColor="@color/colorBlack"
+                            android:text="@string/yearbuilt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_3dp"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:textColor="@color/colorBlack"
+                            android:text="2014"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textStyle="bold"
+                            android:layout_marginLeft="@dimen/dimen_3dp"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:textColor="@color/colorBlack"
+                            android:text="@string/enginemanufacturer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_3dp"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:textColor="@color/colorBlack"
+                            android:text="Yamaha"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textStyle="bold"
+                            android:layout_marginLeft="@dimen/dimen_3dp"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:textColor="@color/colorBlack"
+                            android:text="@string/numberofengines"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_3dp"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:textColor="@color/colorBlack"
+                            android:text="4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textStyle="bold"
+                            android:layout_marginLeft="@dimen/dimen_3dp"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:textColor="@color/colorBlack"
+                            android:text="@string/engine_horsepower"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_marginLeft="@dimen/dimen_3dp"
+                            android:textSize="@dimen/dimen_12sp"
+                            android:textColor="@color/colorBlack"
+                            android:text="115HP"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_below="@+id/main_layout"
+            android:layout_marginTop="@dimen/dimen_30dp"
+            android:id="@+id/rl_top"
+            android:background="@drawable/div"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_30dp">
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@+id/rl_top"
+            android:gravity="center_vertical"
+            android:background="@drawable/info_bg_middle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_100dp">
+            <Button
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:layout_below="@+id/tv_trips_list_text"
+                android:textSize="@dimen/dimen_15sp"
+                android:id="@+id/bt_add_your_fishing_report"
+                android:layout_width="@dimen/dimen_200dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_button"
+                android:text="@string/see_available_other_trips"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                />
+        </RelativeLayout>
+
+    </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>
+

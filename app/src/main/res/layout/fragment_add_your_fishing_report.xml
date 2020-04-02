@@ -1,0 +1,2411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    tools:context=".view.fragments.AddYourTripFragment">
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <include
+            android:id="@+id/l_top"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            layout="@layout/app_bar_add_your_fishing_report" >
+        </include>
+
+        <ScrollView
+            android:layout_below="@+id/l_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+                <RelativeLayout
+                    android:layout_marginLeft="@dimen/dimen_15dp"
+                    android:layout_marginStart="@dimen/dimen_15dp"
+                    android:layout_marginEnd="@dimen/dimen_15dp"
+                    android:layout_marginRight="@dimen/dimen_15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <LinearLayout
+                            android:layout_marginTop="@dimen/dimen_10dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/tv_trip_name"
+                                android:text="@string/fishing_report_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/dimen_title"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorBlack"
+                                />
+
+                            <EditText
+                                android:padding="@dimen/dimen_10dp"
+                                android:id="@+id/et_fishing_report_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dimen_40dp"
+                                android:layout_marginTop="@dimen/dimen_5dp"
+                                android:background="@drawable/selector_edittext_createlisting"
+                                android:inputType="textPersonName"
+                                android:maxLines="1"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginTop="@dimen/dimen_10dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/tv_select_your_character"
+                                android:text="@string/select_your_character"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/dimen_title"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorBlack"
+                                />
+                            <!--                                    <RelativeLayout-->
+                            <!--                                        android:layout_width=""-->
+                            <!--                                        android:layout_height=""-->
+
+                            <RelativeLayout
+                                android:layout_marginTop="@dimen/dimen_5dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dimen_40dp">
+                                <EditText
+
+                                    android:padding="@dimen/dimen_10dp"
+                                    android:id="@+id/et_charter"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/dimen_40dp"
+                                    android:layout_marginTop="@dimen/dimen_5dp"
+                                    android:background="@drawable/selector_edittext_createlisting"
+                                    android:inputType="textPersonName"
+                                    android:maxLines="1"
+                                    />
+                                <androidx.appcompat.widget.AppCompatSpinner
+                                    android:id="@+id/sp_charter"
+                                    android:entries="@array/array_name"
+                                    android:background="@drawable/shape_reactangle_border"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/dimen_40dp"/>
+
+
+                                <ImageView
+                                    android:visibility="gone"
+                                    android:id="@+id/iv_down_cancelation_policy"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:src="@drawable/ic_dropdown_arrow"
+                                    android:layout_width="@dimen/dimen_40dp"
+                                    android:layout_height="@dimen/dimen_40dp"/>
+                                <ImageView
+                                    android:visibility="gone"
+                                    android:layout_marginRight="@dimen/dimen_10dp"
+                                    android:layout_marginEnd="@dimen/dimen_10dp"
+                                    android:id="@+id/iv_down_cancelation_policy_arrow"
+                                    android:layout_centerVertical="true"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:src="@drawable/ic_down_arrow"
+                                    android:layout_width="@dimen/dimen_20dp"
+                                    android:layout_height="@dimen/dimen_20dp"/>
+
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginTop="@dimen/dimen_10dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+
+                                android:id="@+id/tv_date_of_trips"
+                                android:text="@string/date_of_trip"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/dimen_title"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorBlack"
+
+                                />
+
+                            <EditText
+
+                                android:padding="@dimen/dimen_10dp"
+                                android:id="@+id/et_date_of_trip"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dimen_40dp"
+                                android:layout_marginTop="@dimen/dimen_5dp"
+                                android:background="@drawable/selector_edittext_createlisting"
+                                android:inputType="textPersonName"
+                                android:maxLines="1"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginTop="@dimen/dimen_10dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+
+                                android:id="@+id/tv_description"
+                                android:text="@string/description"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/dimen_title"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorBlack"
+                                />
+
+                            <EditText
+                                android:padding="@dimen/dimen_10dp"
+                                android:id="@+id/et_description"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dimen_100dp"
+                                android:layout_marginTop="@dimen/dimen_5dp"
+                                android:background="@drawable/selector_edittext_createlisting"
+                                android:inputType="textPersonName"
+                                android:maxLines="1"
+                                />
+
+                            <TextView
+                                android:layout_marginTop="@dimen/dimen_5dp"
+                                android:text="@string/write_a_summary"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/dimen_title"
+                                android:textStyle="italic"
+                                android:textColor="@color/createlt_info"
+                                />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_marginTop="@dimen/dimen_10dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/tv_add_photos"
+                                android:text="@string/add_photos"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/dimen_title"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorBlack"
+
+                                />
+
+                            <LinearLayout
+                                android:layout_marginTop="@dimen/dimen_10dp"
+                                android:background="@drawable/shape_dotted_reactangle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <RelativeLayout
+                                    android:background="@color/colorLightBlue"
+                                    android:layout_margin="@dimen/dimen_10dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/dimen_100dp">
+                                    <LinearLayout
+                                        android:id="@+id/ll_upload_photo"
+                                        android:layout_centerInParent="true"
+                                        android:orientation="horizontal"
+                                        android:gravity="center"
+                                        android:background="@color/colorSkyBlue"
+                                        android:layout_width="@dimen/dimen_200dp"
+                                        android:layout_height="@dimen/dimen_40dp">
+                                        <ImageView
+                                            android:visibility="visible"
+                                            android:src="@drawable/ic_upload_photo"
+                                            android:layout_width="@dimen/dimen_20dp"
+                                            android:layout_height="@dimen/dimen_20dp"/>
+                                        <TextView
+                                            android:layout_marginStart="@dimen/dimen_10sp"
+                                            android:layout_marginLeft="@dimen/dimen_10sp"
+                                            android:textSize="@dimen/dimen_15dp"
+                                            android:textColor="@color/colorWhite"
+                                            android:text="Upload Photos"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"/>
+                                    </LinearLayout>
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_marginTop="@dimen/dimen_10dp"
+                                android:weightSum="3"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dimen_100dp">
+
+                              <androidx.recyclerview.widget.RecyclerView
+                                  android:visibility="visible"
+                                  android:id="@+id/rv_upload_image"
+                                  android:layout_width="match_parent"
+                                  android:layout_height="wrap_content">
+
+
+                              </androidx.recyclerview.widget.RecyclerView>
+
+
+
+                                <LinearLayout
+                                    android:layout_marginRight="@dimen/dimen_5dp"
+                                    android:layout_marginEnd="@dimen/dimen_5dp"
+                                    android:background="@color/colorLightBlue"
+                                    android:layout_weight="1"
+                                    android:layout_width="@dimen/dimen_0dp"
+                                    android:layout_height="@dimen/dimen_100dp">
+
+                                    <RelativeLayout
+                                        android:background="@color/colorLightBlue"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/dimen_100dp">
+                                        <ImageView
+                                            android:id="@+id/iv_image1"
+                                            android:layout_centerInParent="true"
+                                            android:visibility="visible"
+                                            android:src="@drawable/uploaded_photo_bg"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"/>
+
+                                    </RelativeLayout>
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_marginRight="@dimen/dimen_5dp"
+                                    android:layout_marginEnd="@dimen/dimen_5dp"
+                                    android:layout_marginStart="@dimen/dimen_5dp"
+                                    android:layout_marginLeft="@dimen/dimen_5dp"
+
+                                    android:background="@color/colorLightBlue"
+
+                                    android:layout_weight="1"
+                                    android:layout_width="@dimen/dimen_0dp"
+                                    android:layout_height="@dimen/dimen_100dp">
+                                    <RelativeLayout
+                                        android:background="@color/colorLightBlue"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/dimen_100dp">
+                                        <ImageView
+                                            android:layout_centerInParent="true"
+                                            android:visibility="visible"
+                                            android:src="@drawable/uploaded_photo_bg"
+                                            android:layout_width="@dimen/dimen_50dp"
+                                            android:layout_height="@dimen/dimen_50dp"/>
+
+                                    </RelativeLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_marginStart="@dimen/dimen_5dp"
+                                    android:layout_marginLeft="@dimen/dimen_5dp"
+                                    android:background="@color/colorLightBlue"
+
+                                    android:layout_weight="1"
+                                    android:layout_width="@dimen/dimen_0dp"
+                                    android:layout_height="@dimen/dimen_100dp">
+                                    <RelativeLayout
+                                        android:background="@color/colorLightBlue"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/dimen_100dp">
+                                        <ImageView
+                                            android:layout_centerInParent="true"
+                                            android:visibility="visible"
+                                            android:src="@drawable/uploaded_photo_bg"
+                                            android:layout_width="@dimen/dimen_50dp"
+                                            android:layout_height="@dimen/dimen_50dp"/>
+
+                                    </RelativeLayout>
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_marginTop="@dimen/dimen_20dp"
+                                android:id="@+id/tv_year_built"
+                                android:text="@string/fish_species"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/createlt_lt_heading"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorBlack"
+
+                                />
+
+                            <EditText
+                                android:visibility="gone"
+                                android:textSize="@dimen/dimen_12sp"
+                                android:hint="@string/filter_fish_species"
+                                android:maxLines="1"
+                                android:padding="@dimen/dimen_10dp"
+                                android:id="@+id/et_other_included_items"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dimen_80dp"
+                                android:layout_marginTop="@dimen/dimen_5dp"
+                                android:background="@drawable/selector_edittext_createlisting"
+                                android:inputType="textPersonName"
+                                />
+
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:visibility="visible"
+                                android:layout_marginTop="@dimen/dimen_20dp"
+                                android:layout_below="@+id/underline"
+                                android:scrollbars="none"
+                                android:id="@+id/rv_fish_species"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dimen_20dp">
+                            </androidx.recyclerview.widget.RecyclerView>
+
+
+<!--                            <LinearLayout-->
+<!--                                android:layout_marginTop="@dimen/dimen_15dp"-->
+<!--                                android:weightSum="2.2"-->
+<!--                                android:orientation="horizontal"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="@dimen/dimen_cllst_cbh30dp">-->
+
+
+<!--                                <RelativeLayout-->
+<!--                                    android:layout_weight="1.05"-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_height="match_parent">-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_bottom_fishing_checked"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:background="@drawable/selector_cb_crt_lst_selected"-->
+<!--                                        android:visibility="visible"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_8dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_cb_tick"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            />-->
+
+<!--                                        <TextView-->
+
+<!--                                            android:layout_marginLeft="@dimen/dimen_10dp"-->
+<!--                                            android:text="@string/bottom_fishing"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:textSize="@dimen/dimen_cl_cbtext_14sp"-->
+<!--                                            android:textColor="@color/colorWhite"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_bottom_fishing_unchecked"-->
+<!--                                        android:background="@drawable/shape_reactangle_border"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:visibility="gone"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_checkbox"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            />-->
+<!--                                        <TextView-->
+<!--                                            android:fontFamily="sans-serif-medium"-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:text="@string/bottom_fishing"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:textSize="@dimen/dimen_10sp"-->
+<!--                                            android:textColor="@color/colorBlack"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                </RelativeLayout>-->
+
+
+
+
+<!--                                <LinearLayout-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_weight=".1"-->
+<!--                                    android:layout_height="@dimen/dimen_30dp"/>-->
+
+
+<!--                                <RelativeLayout-->
+<!--                                    android:layout_weight="1.05"-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_height="match_parent">-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_bow_fishing_checked"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:background="@drawable/selector_cb_crt_lst_selected"-->
+<!--                                        android:visibility="visible"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_cb_tick"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            />-->
+<!--                                        <TextView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:text="@string/bow_fishing"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:textSize="@dimen/dimen_10sp"-->
+<!--                                            android:textColor="@color/colorWhite"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_bow_fishing_unchecked"-->
+<!--                                        android:background="@drawable/shape_reactangle_border"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:visibility="gone"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_8dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_checkbox"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            />-->
+<!--                                        <TextView-->
+<!--                                            android:fontFamily="sans-serif-medium"-->
+<!--                                            android:gravity="center_vertical"-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_10dp"-->
+<!--                                            android:text="@string/bow_fishing"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="match_parent"-->
+<!--                                            android:textSize="@dimen/dimen_11sp"-->
+<!--                                            android:textColor="@color/colorBlack"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                </RelativeLayout>-->
+
+
+
+<!--                            </LinearLayout>-->
+
+<!--                            <LinearLayout-->
+<!--                                android:layout_marginTop="@dimen/dimen_25dp"-->
+<!--                                android:weightSum="2.2"-->
+<!--                                android:orientation="horizontal"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="@dimen/dimen_cllst_cbh30dp">-->
+
+
+<!--                                <RelativeLayout-->
+<!--                                    android:layout_weight="1.05"-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_height="match_parent">-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_fs_deep_sea_fishing_checked"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:background="@drawable/selector_cb_crt_lst_selected"-->
+<!--                                        android:visibility="gone"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_8dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_cb_tick"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            />-->
+
+<!--                                        <TextView-->
+
+<!--                                            android:layout_marginLeft="@dimen/dimen_10dp"-->
+<!--                                            android:text="@string/deep_sea_fishing"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:textSize="@dimen/dimen_cl_cbtext_14sp"-->
+<!--                                            android:textColor="@color/colorWhite"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_fs_deep_sea_fishingunchecked"-->
+<!--                                        android:background="@drawable/shape_reactangle_border"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:visibility="visible"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_checkbox"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            />-->
+<!--                                        <TextView-->
+<!--                                            android:fontFamily="sans-serif-medium"-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:text="@string/deep_sea_fishing"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:textSize="@dimen/dimen_10sp"-->
+<!--                                            android:textColor="@color/colorBlack"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                </RelativeLayout>-->
+
+
+
+
+<!--                                <LinearLayout-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_weight=".1"-->
+<!--                                    android:layout_height="@dimen/dimen_30dp"/>-->
+
+
+<!--                                <RelativeLayout-->
+<!--                                    android:layout_weight="1.05"-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_height="match_parent">-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_fs_drill_fishing_checked"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:background="@drawable/selector_cb_crt_lst_selected"-->
+<!--                                        android:visibility="gone"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_cb_tick"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            />-->
+<!--                                        <TextView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:text="@string/drill_fishing"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:textSize="@dimen/dimen_10sp"-->
+<!--                                            android:textColor="@color/colorWhite"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_fs_drill_fishing_unchecked"-->
+<!--                                        android:background="@drawable/shape_reactangle_border"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:visibility="visible"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_8dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_checkbox"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            />-->
+<!--                                        <TextView-->
+<!--                                            android:fontFamily="sans-serif-medium"-->
+<!--                                            android:gravity="center_vertical"-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_10dp"-->
+<!--                                            android:text="@string/drill_fishing"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="match_parent"-->
+<!--                                            android:textSize="@dimen/dimen_11sp"-->
+<!--                                            android:textColor="@color/colorBlack"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                </RelativeLayout>-->
+
+
+
+<!--                            </LinearLayout>-->
+
+<!--                            <LinearLayout-->
+<!--                                android:layout_marginTop="@dimen/dimen_25dp"-->
+<!--                                android:weightSum="2.2"-->
+<!--                                android:orientation="horizontal"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="@dimen/dimen_cllst_cbh30dp">-->
+
+
+<!--                                <RelativeLayout-->
+<!--                                    android:layout_weight="1.05"-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_height="match_parent">-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_fs_flounder_gigging_checked"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:background="@drawable/selector_cb_crt_lst_selected"-->
+<!--                                        android:visibility="gone"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_8dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_cb_tick"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            />-->
+
+<!--                                        <TextView-->
+
+<!--                                            android:layout_marginLeft="@dimen/dimen_10dp"-->
+<!--                                            android:text="@string/flounder_gigging"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:textSize="@dimen/dimen_cl_cbtext_14sp"-->
+<!--                                            android:textColor="@color/colorWhite"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_fs_flounder_gigging_unchecked"-->
+<!--                                        android:background="@drawable/shape_reactangle_border"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:visibility="visible"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_checkbox"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            />-->
+<!--                                        <TextView-->
+<!--                                            android:fontFamily="sans-serif-medium"-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:text="@string/flounder_gigging"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:textSize="@dimen/dimen_10sp"-->
+<!--                                            android:textColor="@color/colorBlack"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                </RelativeLayout>-->
+
+
+
+
+<!--                                <LinearLayout-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_weight=".1"-->
+<!--                                    android:layout_height="@dimen/dimen_30dp"/>-->
+
+
+<!--                                <RelativeLayout-->
+<!--                                    android:layout_weight="1.05"-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_height="match_parent">-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_fs_fly_fishing_checked"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:background="@drawable/selector_cb_crt_lst_selected"-->
+<!--                                        android:visibility="visible"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_cb_tick"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            />-->
+<!--                                        <TextView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:text="@string/fly_fishing"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:textSize="@dimen/dimen_10sp"-->
+<!--                                            android:textColor="@color/colorWhite"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_fs_fly_fishing_unchecked"-->
+<!--                                        android:background="@drawable/shape_reactangle_border"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:visibility="gone"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_8dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_checkbox"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            />-->
+<!--                                        <TextView-->
+<!--                                            android:fontFamily="sans-serif-medium"-->
+<!--                                            android:gravity="center_vertical"-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_10dp"-->
+<!--                                            android:text="@string/fly_fishing"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="match_parent"-->
+<!--                                            android:textSize="@dimen/dimen_11sp"-->
+<!--                                            android:textColor="@color/colorBlack"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                </RelativeLayout>-->
+
+
+
+<!--                            </LinearLayout>-->
+
+<!--                            <LinearLayout-->
+<!--                                android:layout_marginTop="@dimen/dimen_25dp"-->
+<!--                                android:weightSum="2.2"-->
+<!--                                android:orientation="horizontal"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="@dimen/dimen_cllst_cbh30dp">-->
+
+
+<!--                                <RelativeLayout-->
+<!--                                    android:layout_weight="1.05"-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_height="match_parent">-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_fs_handline_checked"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:background="@drawable/selector_cb_crt_lst_selected"-->
+<!--                                        android:visibility="gone"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_8dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_cb_tick"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            />-->
+
+<!--                                        <TextView-->
+
+<!--                                            android:layout_marginLeft="@dimen/dimen_10dp"-->
+<!--                                            android:text="@string/handline"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:textSize="@dimen/dimen_cl_cbtext_14sp"-->
+<!--                                            android:textColor="@color/colorWhite"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_fs_handline_unchecked"-->
+<!--                                        android:background="@drawable/shape_reactangle_border"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:visibility="visible"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_checkbox"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            />-->
+<!--                                        <TextView-->
+<!--                                            android:fontFamily="sans-serif-medium"-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:text="@string/handline"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:textSize="@dimen/dimen_10sp"-->
+<!--                                            android:textColor="@color/colorBlack"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                </RelativeLayout>-->
+
+
+
+
+<!--                                <LinearLayout-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_weight=".1"-->
+<!--                                    android:layout_height="@dimen/dimen_30dp"/>-->
+
+
+<!--                                <RelativeLayout-->
+<!--                                    android:layout_weight="1.05"-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_height="match_parent">-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_fs_ice_fishing_checked"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:background="@drawable/selector_cb_crt_lst_selected"-->
+<!--                                        android:visibility="gone"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_cb_tick"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            />-->
+<!--                                        <TextView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:text="@string/ice_fishing"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:textSize="@dimen/dimen_10sp"-->
+<!--                                            android:textColor="@color/colorWhite"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_fs_ice_fishing_unchecked"-->
+<!--                                        android:background="@drawable/shape_reactangle_border"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:visibility="visible"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_8dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_checkbox"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            />-->
+<!--                                        <TextView-->
+<!--                                            android:fontFamily="sans-serif-medium"-->
+<!--                                            android:gravity="center_vertical"-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_10dp"-->
+<!--                                            android:text="@string/ice_fishing"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="match_parent"-->
+<!--                                            android:textSize="@dimen/dimen_11sp"-->
+<!--                                            android:textColor="@color/colorBlack"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                </RelativeLayout>-->
+
+
+
+<!--                            </LinearLayout>-->
+
+<!--                            <LinearLayout-->
+<!--                                android:layout_marginTop="@dimen/dimen_25dp"-->
+<!--                                android:weightSum="2.2"-->
+<!--                                android:orientation="horizontal"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="@dimen/dimen_cllst_cbh30dp">-->
+
+
+<!--                                <RelativeLayout-->
+<!--                                    android:layout_weight="1.05"-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_height="match_parent">-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_fs_jigging_checked"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:background="@drawable/selector_cb_crt_lst_selected"-->
+<!--                                        android:visibility="gone"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_8dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_cb_tick"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            />-->
+
+<!--                                        <TextView-->
+
+<!--                                            android:layout_marginLeft="@dimen/dimen_10dp"-->
+<!--                                            android:text="@string/jigging"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:textSize="@dimen/dimen_cl_cbtext_14sp"-->
+<!--                                            android:textColor="@color/colorWhite"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_jigging_unchecked"-->
+<!--                                        android:background="@drawable/shape_reactangle_border"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:visibility="visible"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_checkbox"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            />-->
+<!--                                        <TextView-->
+<!--                                            android:fontFamily="sans-serif-medium"-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:text="@string/jigging"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:textSize="@dimen/dimen_10sp"-->
+<!--                                            android:textColor="@color/colorBlack"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                </RelativeLayout>-->
+
+
+
+
+<!--                                <LinearLayout-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_weight=".1"-->
+<!--                                    android:layout_height="@dimen/dimen_30dp"/>-->
+
+
+<!--                                <RelativeLayout-->
+<!--                                    android:layout_weight="1.05"-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_height="match_parent">-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_kite_fishing_checked"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:background="@drawable/selector_cb_crt_lst_selected"-->
+<!--                                        android:visibility="visible"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_cb_tick"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            />-->
+<!--                                        <TextView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:text="@string/kite_fishing"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:textSize="@dimen/dimen_10sp"-->
+<!--                                            android:textColor="@color/colorWhite"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_kite_fishing_unchecked"-->
+<!--                                        android:background="@drawable/shape_reactangle_border"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:visibility="gone"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_8dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_checkbox"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            />-->
+<!--                                        <TextView-->
+<!--                                            android:fontFamily="sans-serif-medium"-->
+<!--                                            android:gravity="center_vertical"-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_10dp"-->
+<!--                                            android:text="@string/kite_fishing"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="match_parent"-->
+<!--                                            android:textSize="@dimen/dimen_11sp"-->
+<!--                                            android:textColor="@color/colorBlack"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                </RelativeLayout>-->
+
+
+
+<!--                            </LinearLayout>-->
+
+<!--                            <LinearLayout-->
+<!--                                android:layout_marginTop="@dimen/dimen_25dp"-->
+<!--                                android:weightSum="2.2"-->
+<!--                                android:orientation="horizontal"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="@dimen/dimen_cllst_cbh30dp">-->
+
+
+<!--                                <RelativeLayout-->
+<!--                                    android:layout_weight="1.05"-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_height="match_parent">-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_light_tackle_checked"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:background="@drawable/selector_cb_crt_lst_selected"-->
+<!--                                        android:visibility="gone"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_8dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_cb_tick"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            />-->
+
+<!--                                        <TextView-->
+
+<!--                                            android:layout_marginLeft="@dimen/dimen_10dp"-->
+<!--                                            android:text="@string/light_tackle"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:textSize="@dimen/dimen_cl_cbtext_14sp"-->
+<!--                                            android:textColor="@color/colorWhite"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_light_tackle_unchecked"-->
+<!--                                        android:background="@drawable/shape_reactangle_border"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:visibility="visible"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_checkbox"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            />-->
+<!--                                        <TextView-->
+<!--                                            android:fontFamily="sans-serif-medium"-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:text="@string/light_tackle"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:textSize="@dimen/dimen_10sp"-->
+<!--                                            android:textColor="@color/colorBlack"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                </RelativeLayout>-->
+
+
+
+
+<!--                                <LinearLayout-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_weight=".1"-->
+<!--                                    android:layout_height="@dimen/dimen_30dp"/>-->
+
+
+<!--                                <RelativeLayout-->
+<!--                                    android:layout_weight="1.05"-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_height="match_parent">-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_spear_fishing_checked"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:background="@drawable/selector_cb_crt_lst_selected"-->
+<!--                                        android:visibility="gone"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_cb_tick"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            />-->
+<!--                                        <TextView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:text="@string/spear_fishing"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:textSize="@dimen/dimen_10sp"-->
+<!--                                            android:textColor="@color/colorWhite"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_spear_fishing_unchecked"-->
+<!--                                        android:background="@drawable/shape_reactangle_border"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:visibility="visible"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_8dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_checkbox"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            />-->
+<!--                                        <TextView-->
+<!--                                            android:fontFamily="sans-serif-medium"-->
+<!--                                            android:gravity="center_vertical"-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_10dp"-->
+<!--                                            android:text="@string/spear_fishing"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="match_parent"-->
+<!--                                            android:textSize="@dimen/dimen_11sp"-->
+<!--                                            android:textColor="@color/colorBlack"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                </RelativeLayout>-->
+
+
+
+<!--                            </LinearLayout>-->
+
+<!--                            <LinearLayout-->
+<!--                                android:layout_marginTop="@dimen/dimen_25dp"-->
+<!--                                android:weightSum="2.2"-->
+<!--                                android:orientation="horizontal"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="@dimen/dimen_cllst_cbh30dp">-->
+
+
+<!--                                <RelativeLayout-->
+<!--                                    android:layout_weight="1.05"-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_height="match_parent">-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_spinning_checked"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:background="@drawable/selector_cb_crt_lst_selected"-->
+<!--                                        android:visibility="visible"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_8dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_cb_tick"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            />-->
+
+<!--                                        <TextView-->
+
+<!--                                            android:layout_marginLeft="@dimen/dimen_10dp"-->
+<!--                                            android:text="@string/spinning"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:textSize="@dimen/dimen_cl_cbtext_14sp"-->
+<!--                                            android:textColor="@color/colorWhite"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_spinning_unchecked"-->
+<!--                                        android:background="@drawable/shape_reactangle_border"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:visibility="gone"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_checkbox"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            />-->
+<!--                                        <TextView-->
+<!--                                            android:fontFamily="sans-serif-medium"-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:text="@string/spinning"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:textSize="@dimen/dimen_10sp"-->
+<!--                                            android:textColor="@color/colorBlack"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                </RelativeLayout>-->
+
+
+
+
+<!--                                <LinearLayout-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_weight=".1"-->
+<!--                                    android:layout_height="@dimen/dimen_30dp"/>-->
+
+
+<!--                                <RelativeLayout-->
+<!--                                    android:layout_weight="1.05"-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_height="match_parent">-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_surf_casting_checked"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:background="@drawable/selector_cb_crt_lst_selected"-->
+<!--                                        android:visibility="gone"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_cb_tick"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            />-->
+<!--                                        <TextView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:text="@string/surf_casting"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:textSize="@dimen/dimen_10sp"-->
+<!--                                            android:textColor="@color/colorWhite"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_surf_casting_unchecked"-->
+<!--                                        android:background="@drawable/shape_reactangle_border"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:visibility="visible"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_8dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_checkbox"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            />-->
+<!--                                        <TextView-->
+<!--                                            android:fontFamily="sans-serif-medium"-->
+<!--                                            android:gravity="center_vertical"-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_10dp"-->
+<!--                                            android:text="@string/surf_casting"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="match_parent"-->
+<!--                                            android:textSize="@dimen/dimen_11sp"-->
+<!--                                            android:textColor="@color/colorBlack"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                </RelativeLayout>-->
+
+
+
+<!--                            </LinearLayout>-->
+
+<!--                            <LinearLayout-->
+<!--                                android:layout_marginTop="@dimen/dimen_25dp"-->
+<!--                                android:weightSum="2.2"-->
+<!--                                android:orientation="horizontal"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="@dimen/dimen_cllst_cbh30dp">-->
+
+
+<!--                                <RelativeLayout-->
+<!--                                    android:layout_weight="1.05"-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_height="match_parent">-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_fs_trolling_checked"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:background="@drawable/selector_cb_crt_lst_selected"-->
+<!--                                        android:visibility="gone"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_8dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_cb_tick"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            />-->
+
+<!--                                        <TextView-->
+
+<!--                                            android:layout_marginLeft="@dimen/dimen_10dp"-->
+<!--                                            android:text="@string/trolling"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:textSize="@dimen/dimen_cl_cbtext_14sp"-->
+<!--                                            android:textColor="@color/colorWhite"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_fs_trolling_unchecked"-->
+<!--                                        android:background="@drawable/shape_reactangle_border"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:visibility="visible"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_checkbox"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            />-->
+<!--                                        <TextView-->
+<!--                                            android:fontFamily="sans-serif-medium"-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:text="@string/trolling"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:textSize="@dimen/dimen_10sp"-->
+<!--                                            android:textColor="@color/colorBlack"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                </RelativeLayout>-->
+
+
+
+
+<!--                                <LinearLayout-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_weight=".1"-->
+<!--                                    android:layout_height="@dimen/dimen_30dp"/>-->
+
+<!--                                <RelativeLayout-->
+<!--                                    android:layout_weight="1.05"-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_height="match_parent">-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_fs_fly_fishing1_checked"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:background="@drawable/selector_cb_crt_lst_selected"-->
+<!--                                        android:visibility="visible"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_cb_tick"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            />-->
+<!--                                        <TextView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:text="@string/fly_fishing"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:textSize="@dimen/dimen_10sp"-->
+<!--                                            android:textColor="@color/colorWhite"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_fs_fly_fishing1_unchecked"-->
+<!--                                        android:background="@drawable/shape_reactangle_border"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:visibility="gone"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_8dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_checkbox"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            />-->
+<!--                                        <TextView-->
+<!--                                            android:fontFamily="sans-serif-medium"-->
+<!--                                            android:gravity="center_vertical"-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_10dp"-->
+<!--                                            android:text="@string/fly_fishing"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="match_parent"-->
+<!--                                            android:textSize="@dimen/dimen_11sp"-->
+<!--                                            android:textColor="@color/colorBlack"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                </RelativeLayout>-->
+
+<!--                            </LinearLayout>-->
+
+
+<!--                            <LinearLayout-->
+<!--                                android:layout_marginTop="@dimen/dimen_25dp"-->
+<!--                                android:weightSum="2.2"-->
+<!--                                android:orientation="horizontal"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="@dimen/dimen_cllst_cbh30dp">-->
+
+
+<!--                                <RelativeLayout-->
+<!--                                    android:layout_weight="1.05"-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_height="match_parent">-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_fs_deep_sea_fishing_checked"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:background="@drawable/selector_cb_crt_lst_selected"-->
+<!--                                        android:visibility="gone"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_8dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_cb_tick"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            />-->
+
+<!--                                        <TextView-->
+
+<!--                                            android:layout_marginLeft="@dimen/dimen_10dp"-->
+<!--                                            android:text="@string/deep_sea_fishing"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:textSize="@dimen/dimen_cl_cbtext_14sp"-->
+<!--                                            android:textColor="@color/colorWhite"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_fs_deep_sea_fishingunchecked"-->
+<!--                                        android:background="@drawable/shape_reactangle_border"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:visibility="visible"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_checkbox"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            />-->
+<!--                                        <TextView-->
+<!--                                            android:fontFamily="sans-serif-medium"-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:text="@string/deep_sea_fishing"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:textSize="@dimen/dimen_10sp"-->
+<!--                                            android:textColor="@color/colorBlack"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                </RelativeLayout>-->
+
+
+
+
+<!--                                <LinearLayout-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_weight=".1"-->
+<!--                                    android:layout_height="@dimen/dimen_30dp"/>-->
+
+
+<!--                                <RelativeLayout-->
+<!--                                    android:layout_weight="1.05"-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_height="match_parent">-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_fs_ice_fishing1_checked"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:background="@drawable/selector_cb_crt_lst_selected"-->
+<!--                                        android:visibility="gone"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_cb_tick"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            />-->
+<!--                                        <TextView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:text="@string/ice_fishing"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:textSize="@dimen/dimen_10sp"-->
+<!--                                            android:textColor="@color/colorWhite"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_fs_ice_fishing1_unchecked"-->
+<!--                                        android:background="@drawable/shape_reactangle_border"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:visibility="visible"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_8dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_checkbox"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            />-->
+<!--                                        <TextView-->
+<!--                                            android:fontFamily="sans-serif-medium"-->
+<!--                                            android:gravity="center_vertical"-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_10dp"-->
+<!--                                            android:text="@string/ice_fishing"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="match_parent"-->
+<!--                                            android:textSize="@dimen/dimen_11sp"-->
+<!--                                            android:textColor="@color/colorBlack"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                </RelativeLayout>-->
+
+
+
+<!--                            </LinearLayout>-->
+
+
+<!--                            <LinearLayout-->
+<!--                                android:layout_marginTop="@dimen/dimen_25dp"-->
+<!--                                android:weightSum="2.2"-->
+<!--                                android:orientation="horizontal"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="@dimen/dimen_cllst_cbh30dp">-->
+
+
+<!--                                <RelativeLayout-->
+<!--                                    android:layout_weight="1.05"-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_height="match_parent">-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_fs_flounder_gigging1_checked"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:background="@drawable/selector_cb_crt_lst_selected"-->
+<!--                                        android:visibility="gone"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_8dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_cb_tick"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            />-->
+
+<!--                                        <TextView-->
+
+<!--                                            android:layout_marginLeft="@dimen/dimen_10dp"-->
+<!--                                            android:text="@string/flounder_gigging"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:textSize="@dimen/dimen_cl_cbtext_14sp"-->
+<!--                                            android:textColor="@color/colorWhite"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_fs_flounder_gigging1_unchecked"-->
+<!--                                        android:background="@drawable/shape_reactangle_border"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:visibility="visible"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_checkbox"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            />-->
+<!--                                        <TextView-->
+<!--                                            android:fontFamily="sans-serif-medium"-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:text="@string/flounder_gigging"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:textSize="@dimen/dimen_10sp"-->
+<!--                                            android:textColor="@color/colorBlack"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                </RelativeLayout>-->
+
+
+
+
+<!--                                <LinearLayout-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_weight=".1"-->
+<!--                                    android:layout_height="@dimen/dimen_30dp"/>-->
+
+
+<!--                                <RelativeLayout-->
+<!--                                    android:layout_weight="1.05"-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_height="match_parent">-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_fs_kite_fishing_checked"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:background="@drawable/selector_cb_crt_lst_selected"-->
+<!--                                        android:visibility="visible"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_cb_tick"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            />-->
+<!--                                        <TextView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:text="@string/kite_fishing"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:textSize="@dimen/dimen_10sp"-->
+<!--                                            android:textColor="@color/colorWhite"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_fs_kite_fishing_unchecked"-->
+<!--                                        android:background="@drawable/shape_reactangle_border"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:visibility="gone"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_8dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_checkbox"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            />-->
+<!--                                        <TextView-->
+<!--                                            android:fontFamily="sans-serif-medium"-->
+<!--                                            android:gravity="center_vertical"-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_10dp"-->
+<!--                                            android:text="@string/fly_fishing"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="match_parent"-->
+<!--                                            android:textSize="@dimen/dimen_11sp"-->
+<!--                                            android:textColor="@color/colorBlack"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                </RelativeLayout>-->
+
+
+
+<!--                            </LinearLayout>-->
+
+<!--                            <LinearLayout-->
+<!--                                android:layout_marginTop="@dimen/dimen_25dp"-->
+<!--                                android:weightSum="2.2"-->
+<!--                                android:orientation="horizontal"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="@dimen/dimen_cllst_cbh30dp">-->
+
+
+<!--                                <RelativeLayout-->
+<!--                                    android:layout_weight="1.05"-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_height="match_parent">-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_fs_handline_checked"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:background="@drawable/selector_cb_crt_lst_selected"-->
+<!--                                        android:visibility="gone"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_8dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_cb_tick"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            />-->
+
+<!--                                        <TextView-->
+
+<!--                                            android:layout_marginLeft="@dimen/dimen_10dp"-->
+<!--                                            android:text="@string/handline"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:textSize="@dimen/dimen_cl_cbtext_14sp"-->
+<!--                                            android:textColor="@color/colorWhite"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_fs_handline_unchecked"-->
+<!--                                        android:background="@drawable/shape_reactangle_border"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:visibility="visible"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_checkbox"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            />-->
+<!--                                        <TextView-->
+<!--                                            android:fontFamily="sans-serif-medium"-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:text="@string/handline"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:textSize="@dimen/dimen_10sp"-->
+<!--                                            android:textColor="@color/colorBlack"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                </RelativeLayout>-->
+
+
+
+
+<!--                                <LinearLayout-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_weight=".1"-->
+<!--                                    android:layout_height="@dimen/dimen_30dp"/>-->
+
+
+<!--                                <RelativeLayout-->
+<!--                                    android:layout_weight="1.05"-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_height="match_parent">-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_fs_spear_fishing_checked"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:background="@drawable/selector_cb_crt_lst_selected"-->
+<!--                                        android:visibility="gone"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_cb_tick"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            />-->
+<!--                                        <TextView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:text="@string/spear_fishing"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:textSize="@dimen/dimen_10sp"-->
+<!--                                            android:textColor="@color/colorWhite"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_fs_spear_fishing_unchecked"-->
+<!--                                        android:background="@drawable/shape_reactangle_border"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:visibility="visible"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_8dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_checkbox"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            />-->
+<!--                                        <TextView-->
+<!--                                            android:fontFamily="sans-serif-medium"-->
+<!--                                            android:gravity="center_vertical"-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_10dp"-->
+<!--                                            android:text="@string/spear_fishing"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="match_parent"-->
+<!--                                            android:textSize="@dimen/dimen_11sp"-->
+<!--                                            android:textColor="@color/colorBlack"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                </RelativeLayout>-->
+
+
+
+<!--                            </LinearLayout>-->
+
+<!--                            <LinearLayout-->
+<!--                                android:layout_marginTop="@dimen/dimen_25dp"-->
+<!--                                android:weightSum="2.2"-->
+<!--                                android:orientation="horizontal"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="@dimen/dimen_cllst_cbh30dp">-->
+
+
+<!--                                <RelativeLayout-->
+<!--                                    android:layout_weight="1.05"-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_height="match_parent">-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_fs_jigging_checked"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:background="@drawable/selector_cb_crt_lst_selected"-->
+<!--                                        android:visibility="gone"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_8dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_cb_tick"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            />-->
+
+<!--                                        <TextView-->
+
+<!--                                            android:layout_marginLeft="@dimen/dimen_10dp"-->
+<!--                                            android:text="@string/jigging"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:textSize="@dimen/dimen_cl_cbtext_14sp"-->
+<!--                                            android:textColor="@color/colorWhite"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_fs_jigging_unchecked"-->
+<!--                                        android:background="@drawable/shape_reactangle_border"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:visibility="visible"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_checkbox"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            />-->
+<!--                                        <TextView-->
+<!--                                            android:fontFamily="sans-serif-medium"-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:text="@string/jigging"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:textSize="@dimen/dimen_10sp"-->
+<!--                                            android:textColor="@color/colorBlack"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                </RelativeLayout>-->
+
+
+
+
+<!--                                <LinearLayout-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_weight=".1"-->
+<!--                                    android:layout_height="@dimen/dimen_30dp"/>-->
+
+
+<!--                                <RelativeLayout-->
+<!--                                    android:layout_weight="1.05"-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_height="match_parent">-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_fs_surf_casting_checked"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:background="@drawable/selector_cb_crt_lst_selected"-->
+<!--                                        android:visibility="visible"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_cb_tick"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            />-->
+<!--                                        <TextView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:text="@string/surf_casting"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:textSize="@dimen/dimen_10sp"-->
+<!--                                            android:textColor="@color/colorWhite"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_fs_surf_casting_unchecked"-->
+<!--                                        android:background="@drawable/shape_reactangle_border"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:visibility="gone"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_8dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_checkbox"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            />-->
+<!--                                        <TextView-->
+<!--                                            android:fontFamily="sans-serif-medium"-->
+<!--                                            android:gravity="center_vertical"-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_10dp"-->
+<!--                                            android:text="@string/kite_fishing"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="match_parent"-->
+<!--                                            android:textSize="@dimen/dimen_11sp"-->
+<!--                                            android:textColor="@color/colorBlack"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                </RelativeLayout>-->
+
+
+
+<!--                            </LinearLayout>-->
+
+<!--                            <LinearLayout-->
+<!--                                android:layout_marginTop="@dimen/dimen_25dp"-->
+<!--                                android:weightSum="2.2"-->
+<!--                                android:orientation="horizontal"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="@dimen/dimen_cllst_cbh30dp">-->
+
+
+<!--                                <RelativeLayout-->
+<!--                                    android:layout_weight="1.05"-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_height="match_parent">-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_fs_light_tackle_checked"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:background="@drawable/selector_cb_crt_lst_selected"-->
+<!--                                        android:visibility="gone"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_8dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_cb_tick"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            />-->
+
+<!--                                        <TextView-->
+
+<!--                                            android:layout_marginLeft="@dimen/dimen_10dp"-->
+<!--                                            android:text="@string/light_tackle"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:textSize="@dimen/dimen_cl_cbtext_14sp"-->
+<!--                                            android:textColor="@color/colorWhite"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_fs_light_tackle_unchecked"-->
+<!--                                        android:background="@drawable/shape_reactangle_border"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:visibility="visible"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_checkbox"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            />-->
+<!--                                        <TextView-->
+<!--                                            android:fontFamily="sans-serif-medium"-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:text="@string/light_tackle"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:textSize="@dimen/dimen_10sp"-->
+<!--                                            android:textColor="@color/colorBlack"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                </RelativeLayout>-->
+
+
+
+
+<!--                                <LinearLayout-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_weight=".1"-->
+<!--                                    android:layout_height="@dimen/dimen_30dp"/>-->
+
+
+<!--                                <RelativeLayout-->
+<!--                                    android:layout_weight="1.05"-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_height="match_parent">-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_fs_jigging1_checked"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:background="@drawable/selector_cb_crt_lst_selected"-->
+<!--                                        android:visibility="gone"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_cb_tick"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            />-->
+<!--                                        <TextView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_6dp"-->
+<!--                                            android:text="@string/jigging"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:textSize="@dimen/dimen_10sp"-->
+<!--                                            android:textColor="@color/colorWhite"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:id="@+id/cb_fs_jigging1_unchecked"-->
+<!--                                        android:background="@drawable/shape_reactangle_border"-->
+<!--                                        android:gravity="start|center_vertical"-->
+<!--                                        android:orientation="horizontal"-->
+<!--                                        android:visibility="visible"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_8dp"-->
+<!--                                            android:layout_centerVertical="true"-->
+<!--                                            android:src="@drawable/ic_checkbox"-->
+<!--                                            android:layout_width="@dimen/dimen_iv_cb_20dp"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            />-->
+<!--                                        <TextView-->
+<!--                                            android:fontFamily="sans-serif-medium"-->
+<!--                                            android:gravity="center_vertical"-->
+<!--                                            android:layout_marginLeft="@dimen/dimen_10dp"-->
+<!--                                            android:text="@string/jigging"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="match_parent"-->
+<!--                                            android:textSize="@dimen/dimen_11sp"-->
+<!--                                            android:textColor="@color/colorBlack"-->
+
+<!--                                            />-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                </RelativeLayout>-->
+
+
+
+<!--                            </LinearLayout>-->
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_top"
+                    android:background="@drawable/div"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_30dp">
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:gravity="center_vertical"
+                    android:background="@drawable/info_bg_middle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_100dp">
+                    <Button
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:layout_below="@+id/tv_trips_list_text"
+                        android:textSize="@dimen/dimen_15sp"
+                        android:id="@+id/bt_add_your_fishing_report"
+                        android:layout_width="@dimen/dimen_200dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_button"
+                        android:text="@string/post_your_fishing_report"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorWhite"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+
+
+    </RelativeLayout>
+</FrameLayout>

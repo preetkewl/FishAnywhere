@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/info_bg_middle">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="@dimen/dimen_70dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dimen_8dp"
+            android:src="@drawable/ic_dash_home_icon"
+            app:backgroundTint="#357DAF"
+            app:fabCustomSize="@dimen/dimen_70dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="3">
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:background="@drawable/info_bg_top"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".85"
+                    android:background="@drawable/dashboard_bg" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".25"
+                    android:background="@color/colorWhite"
+                    android:gravity="start|center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_username"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dimen_20dp"
+                            android:gravity="center"
+                            android:text="@string/Johnsmith"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/dimen_20sp"
+                            android:textStyle="bold"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_viewmyprofile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dimen_10dp"
+                            android:gravity="center"
+                            android:text="@string/viewmyprofile"
+                            android:textColor="#FA8B25"
+                            android:textSize="@dimen/dimen_15sp"
+                            android:visibility="gone"
+
+                            />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="@dimen/dimen_60dp"
+                        android:layout_height="4dp"
+                        android:layout_marginLeft="@dimen/dimen_20dp"
+                        android:layout_marginTop="@dimen/dimen_2dp"
+                        android:background="@color/colorDrawerBg"
+
+                        />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".9"
+                    android:orientation="vertical"
+                    android:weightSum="2.2">
+
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="@dimen/dimen_15dp"
+                        android:layout_marginRight="@dimen/dimen_15dp"
+                        android:layout_weight=".85"
+                        android:orientation="horizontal"
+                        android:weightSum="3.2">
+
+                        <LinearLayout
+                            android:id="@+id/ll_profile"
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/selector_dash_box"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/iv_profile_edit"
+                                android:layout_width="@dimen/dimen_30dp"
+                                android:layout_height="@dimen/dimen_30dp"
+                                android:src="@drawable/ic_dash_profileicon" />
+
+                            <TextView
+                                android:id="@+id/tv_profile_edit"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dimen_8dp"
+                                android:gravity="center_horizontal"
+                                android:text="@string/profileedit"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/dimen_12sp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".1" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_calender"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+
+                            android:background="@drawable/selector_dash_box"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/iv_calender"
+                                android:layout_width="@dimen/dimen_30dp"
+                                android:layout_height="@dimen/dimen_30dp"
+                                android:src="@drawable/ic_dash_calendericon" />
+
+                            <TextView
+                                android:id="@+id/tv_calender"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dimen_8dp"
+                                android:gravity="center_horizontal"
+                                android:text="@string/calender"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/dimen_12sp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".1" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_send_reviews"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/selector_dash_box"
+
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/iv_sendreviews"
+                                android:layout_width="@dimen/dimen_30dp"
+                                android:layout_height="@dimen/dimen_30dp"
+                                android:src="@drawable/ic_dash_review" />
+
+                            <TextView
+                                android:id="@+id/tv_sendreviews"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dimen_8dp"
+                                android:gravity="center_horizontal"
+                                android:text="@string/sendreviews"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/dimen_12sp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+
+
+                            android:id="@+id/ll_fishing_reports_"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/selector_dash_box"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal">
+
+                                <ImageView
+                                    android:id="@+id/iv_fishing_report_"
+                                    android:layout_width="@dimen/dimen_30dp"
+                                    android:layout_height="@dimen/dimen_30dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/ic_dash_addfishingreport" />
+
+                                <TextView
+                                    android:id="@+id/tv_add_fishing_report"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/iv_fishing_report_"
+                                    android:layout_centerInParent="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginLeft="@dimen/dimen_10dp"
+                                    android:layout_marginTop="@dimen/dimen_5dp"
+
+                                    android:layout_marginRight="@dimen/dimen_10dp"
+
+                                    android:gravity="center"
+                                    android:text="@string/addfishingreport"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/dimen_10sp" />
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight=".15" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="@dimen/dimen_8dp"
+                        android:layout_marginRight="@dimen/dimen_15dp"
+                        android:layout_weight=".85"
+                        android:orientation="horizontal"
+                        android:weightSum="3.2">
+
+                        <LinearLayout
+                            android:id="@+id/ll_snooze_listing"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/selector_dash_box"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/iv_snoozelisting"
+                                android:layout_width="@dimen/dimen_30dp"
+                                android:layout_height="@dimen/dimen_30dp"
+                                android:src="@drawable/ic_dash_snoozelisting" />
+
+                            <TextView
+                                android:id="@+id/tv_snoozelisting"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dimen_8dp"
+                                android:gravity="center_horizontal"
+                                android:text="@string/snoozlisting"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/dimen_12sp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".1" />
+
+                        <LinearLayout
+
+                            android:id="@+id/ll_fishing_reports_1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/selector_dash_box"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <RelativeLayout
+
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal">
+
+                                <ImageView
+                                    android:id="@+id/iv_fishing_report_1"
+                                    android:layout_width="@dimen/dimen_30dp"
+                                    android:layout_height="@dimen/dimen_30dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/ic_dash_addfishingreport" />
+
+                                <TextView
+                                    android:id="@+id/tv_add_fishing_report1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/iv_fishing_report_1"
+                                    android:layout_centerInParent="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginLeft="@dimen/dimen_10dp"
+                                    android:layout_marginTop="@dimen/dimen_5dp"
+
+                                    android:layout_marginRight="@dimen/dimen_10dp"
+
+                                    android:gravity="center"
+                                    android:text="@string/addfishingreport"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/dimen_10sp" />
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".1"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+
+
+                            android:id="@+id/ll_sign_out"
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+
+                            android:background="@drawable/selector_sign_out"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/iv_delete"
+                                android:layout_width="@dimen/dimen_30dp"
+                                android:layout_height="@dimen/dimen_30dp"
+                                android:src="@drawable/ic_sign_out" />
+
+                            <TextView
+                                android:id="@+id/tv_delete"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dimen_8dp"
+                                android:gravity="center_horizontal"
+                                android:text="@string/sign_out"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/dimen_12sp" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight=".15"
+                        android:visibility="invisible" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.1"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".9"
+                    android:background="@drawable/info_bg_middle"
+                    android:elevation="200dp"
+                    android:orientation="vertical"
+                    android:weightSum="3">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight=".7"
+                        android:orientation="vertical"
+                        android:visibility="invisible">
+
+                        <TextView
+
+                            android:id="@+id/tv_listourfishingservice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dimen_20dp"
+                            android:gravity="center"
+                            android:text="@string/listourfishingservice"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/dimen_20sp"
+                            android:textStyle="bold"
+
+                            />
+
+                        <View
+                            android:layout_width="@dimen/dimen_60dp"
+                            android:layout_height="4dp"
+                            android:layout_marginLeft="@dimen/dimen_20dp"
+                            android:layout_marginTop="@dimen/dimen_4dp"
+                            android:background="@color/colorDrawerBg"
+
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.3"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/bt_createlisting"
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/dimen_10dp"
+                            android:background="@drawable/selector_button"
+                            android:text="@string/createlisting"
+                            android:textAllCaps="false"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/dimen_15sp"
+                            android:visibility="invisible" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:elevation="@dimen/dimen_5dp">
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:elevation="@dimen/dimen_15dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:weightSum="5">
+
+
+                                <LinearLayout
+                                    android:id="@+id/ll_realndeal"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="@dimen/dimen_5dp"
+                                    android:layout_weight="1.1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <ImageView
+                                        android:id="@+id/iv_realndeal"
+                                        android:layout_width="@dimen/dimen_25dp"
+                                        android:layout_height="@dimen/dimen_25dp"
+                                        android:src="@drawable/ic_real_n_deal" />
+
+                                    <TextView
+                                        android:id="@+id/tv_realndeal"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_horizontal"
+                                        android:text="@string/realndeals"
+                                        android:textColor="@color/login_text_grey"
+                                        android:textSize="@dimen/dimen_10sp" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/ll_trips"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight=".8"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <ImageView
+                                        android:id="@+id/iv_trips"
+                                        android:layout_width="@dimen/dimen_25dp"
+                                        android:layout_height="@dimen/dimen_25dp"
+                                        android:src="@drawable/ic_dash_trips" />
+
+                                    <TextView
+                                        android:id="@+id/tv_trips"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_horizontal"
+                                        android:text="@string/trips"
+                                        android:textColor="@color/login_text_grey"
+                                        android:textSize="@dimen/dimen_10sp" />
+
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:id="@+id/ll_bookings"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/iv_bookings"
+                                        android:layout_width="@dimen/dimen_25dp"
+                                        android:layout_height="@dimen/dimen_25dp"
+                                        android:src="@drawable/ic_dash_booking" />
+
+                                    <TextView
+                                        android:id="@+id/tv_booking"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_horizontal"
+                                        android:text="@string/booking"
+                                        android:textColor="@color/login_text_grey"
+                                        android:textSize="@dimen/dimen_10sp" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1">
+
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:id="@+id/ll_fishing_reports"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/iv_fishing_report"
+                                        android:layout_width="@dimen/dimen_25dp"
+                                        android:layout_height="@dimen/dimen_25dp"
+                                        android:src="@drawable/ic_dash_fishingreport" />
+
+                                    <TextView
+                                        android:id="@+id/tv_fishingreport"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_horizontal"
+                                        android:text="@string/fishing_report"
+                                        android:textColor="@color/login_text_grey"
+                                        android:textSize="@dimen/dimen_10sp" />
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</LinearLayout>

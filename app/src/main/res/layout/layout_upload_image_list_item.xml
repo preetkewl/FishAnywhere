@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginRight="@dimen/dimen_5dp"
+    android:layout_marginEnd="@dimen/dimen_5dp"
+    android:background="@color/colorLightBlue"
+    android:layout_weight="1"
+    android:layout_width="150dp"
+    app:layout_goneMarginEnd="@dimen/dimen_10dp"
+    app:layout_goneMarginRight="@dimen/dimen_10dp"
+    android:layout_height="@dimen/dimen_100dp">
+
+    <RelativeLayout
+        android:background="@color/colorLightBlue"
+        android:layout_width="150dp"
+        android:layout_height="@dimen/dimen_100dp">
+
+        <ImageView
+            android:padding="@dimen/dimen_5dp"
+            android:scaleType="fitXY"
+            android:id="@+id/iv_image1"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            android:src="@drawable/uploaded_photo_bg"
+            android:layout_width="150dp"
+            android:layout_height="@dimen/dimen_100dp" />
+
+        <ImageView
+            android:id="@+id/iv_imageCross"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/close"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

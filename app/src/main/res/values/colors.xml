@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#00B4E0</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorLightGrey">#CACACA</color>
+    <color name="colorSkyBlue">#00B4E0</color>
+    <color name="colorDarkGray">#707070</color>
+    <color name="colorDrawerBg">#357DAF</color>
+    <color name="login_text_grey">#CACACA</color>
+    <color name="shadow_line">#F7F7F7</color>
+    <color name="createlist_editext">#F5F5F5</color>
+    <color name="createlt_info">#818181</color>
+    <color name="colorGreen">#47A94D</color>
+    <color name="colorRed">#FF5D5D</color>
+    <color name="colorLightSky">#EFFAFD</color>
+
+
+
+    <color name="createlist_formguide">#323232</color>
+
+    <color name="cl_prvbt">#818181</color>
+    <color name="cbselected">#47A94D</color>
+    <color name="createlist_subheading">#323232</color>
+    <color name="colorLightBlue">#EFFAFD</color>
+    <color name="color_register_text">#FA8B25</color>
+    <color name="fishing_photo">#EFFAFD</color>
+    <color name="send_reviews_statusbar">#035C7F</color>
+    <color name="color_gray_bg">#f6f6f6</color>
+
+
+    <color name="colorTrasparent">#0039c6f4</color>
+    <color name="colorBorder">#dcdbdb</color>
+
+
+</resources>

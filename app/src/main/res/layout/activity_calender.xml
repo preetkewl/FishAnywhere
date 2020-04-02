@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.activity.CalenderActivity">
+
+    <include
+        layout="@layout/appbar_create_listing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:id="@+id/shadow"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_5dp"
+        android:background="@color/shadow_line"/>
+
+    <ScrollView
+        android:background="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ll_calender"
+                android:layout_width="match_parent"
+                android:layout_height="350dp">
+
+                <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                    android:id="@+id/calendarView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:mcv_arrowColor="@color/colorAccent"
+                    app:mcv_leftArrowMask="@drawable/ic_calender_prev"
+                    app:mcv_rightArrowMask="@drawable/ic_calender_next"
+                    app:mcv_selectionColor="@color/colorAccent"
+                    app:mcv_showOtherDates="7" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:weightSum="4.5"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+
+                    android:id="@+id/tv_from_dat"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorSkyBlue"
+                    android:gravity="center"
+                    android:text="@string/from"
+                    android:background="@color/colorLightBlue"
+                    android:layout_weight=".95"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/margin_40"/>
+
+                <LinearLayout
+                    android:layout_weight=".1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:textStyle="bold"
+                    android:id="@+id/tv_to_dat"
+                    android:paddingLeft="@dimen/dimen_10dp"
+                    android:textColor="@color/colorSkyBlue"
+                    android:gravity="center_vertical|start"
+                    android:text="@string/to"
+                    android:background="@color/colorLightBlue"
+                    android:layout_weight=".95"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/margin_40"/>
+
+                <LinearLayout
+                    android:layout_weight=".1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:textStyle="bold"
+                    android:id="@+id/tv_type"
+                    android:paddingLeft="@dimen/dimen_10dp"
+                    android:textColor="@color/colorSkyBlue"
+                    android:gravity="center_vertical|start"
+                    android:text="@string/type"
+                    android:background="@color/colorLightBlue"
+                    android:layout_weight=".9"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/margin_40"/>
+                <LinearLayout
+
+                    android:layout_weight=".1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:textSize="@dimen/dimen_13sp"
+                    android:textStyle="bold"
+                    android:paddingRight="@dimen/dimen_2dp"
+                    android:paddingEnd="@dimen/dimen_2dp"
+                    android:id="@+id/tv_blocking_note"
+                    android:paddingLeft="@dimen/dimen_10dp"
+                    android:textColor="@color/colorSkyBlue"
+                    android:gravity="center_vertical|start"
+                    android:text="@string/blockingnote"
+                    android:background="@color/colorLightBlue"
+                    android:layout_weight="1.4"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/margin_40"/>
+
+                <RelativeLayout
+                    android:layout_weight=".2"
+                    android:id="@+id/rl_delete"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:visibility="invisible"
+
+                        android:layout_marginRight="@dimen/dimen_20dp"
+
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_delete"
+                        android:id="@+id/iv_close"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <ImageView
+
+                        android:visibility="gone"
+                        android:paddingStart="@dimen/dimen_5dp"
+                        android:paddingLeft="@dimen/dimen_5dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_cross_white"
+                        android:id="@+id/iv_close_cross"
+                        android:layout_width="@dimen/dimen_16dp"
+                        android:layout_height="@dimen/dimen_16dp"/>
+
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_3dp"
+                    android:background="@color/shadow_line"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:visibility="visible"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:scrollbars="none"
+                    android:id="@+id/rv_trip_calender_listing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10dp">
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_3dp"
+                android:background="@color/shadow_line"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="20dip"
+                    android:layout_marginRight="20dip"
+
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:background="@drawable/selector_reel_deal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <LinearLayout
+                            android:id="@+id/ll_from_date"
+                            android:layout_marginLeft="@dimen/dimen_20dp"
+                            android:layout_below="@+id/div"
+                            android:layout_marginTop="@dimen/dimen_10dp"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <LinearLayout
+                                android:id="@+id/llFromDate"
+                                android:orientation="vertical"
+                                android:onClick="showDatePickerDialog"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:onClick="showDatePickerDialog"
+                                    android:layout_marginTop="@dimen/dimen_10dp"
+                                    android:fontFamily="sans-serif-medium"
+                                    android:id="@+id/tv_from_date"
+                                    android:text="@string/from"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/dimen_title"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorBlack"/>
+
+                                <EditText
+                                    android:onClick="showDatePickerDialog"
+                                    android:focusable="false"
+                                    android:clickable="false"
+                                    android:hint="mm/dd/yyyy"
+                                    android:padding="@dimen/dimen_10dp"
+                                    android:id="@+id/et_from_date"
+                                    android:layout_width="150dp"
+                                    android:layout_height="@dimen/dimen_40dp"
+                                    android:layout_marginTop="@dimen/dimen_10dp"
+                                    android:background="@drawable/selector_edittext_createlisting"
+                                    android:inputType="textPersonName"
+                                    android:maxLines="1"
+                                    />
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/llToDate"
+                                android:onClick="showDatePickerDialog"
+                                android:layout_marginLeft="@dimen/dimen_20dp"
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:onClick="showDatePickerDialog"
+                                    android:layout_marginTop="@dimen/dimen_10dp"
+                                    android:fontFamily="sans-serif-medium"
+                                    android:id="@+id/tv_to_date"
+                                    android:text="@string/to"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/dimen_title"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorBlack"/>
+
+                                <EditText
+                                    android:onClick="showDatePickerDialog"
+                                    android:focusable="false"
+                                    android:clickable="false"
+                                    android:hint="mm/dd/yyyy"
+                                    android:padding="@dimen/dimen_10dp"
+                                    android:id="@+id/et_to_date"
+                                    android:layout_width="150dp"
+                                    android:layout_height="@dimen/dimen_40dp"
+                                    android:layout_marginTop="@dimen/dimen_10dp"
+                                    android:background="@drawable/selector_edittext_createlisting"
+                                    android:inputType="textPersonName"
+                                    android:maxLines="1"
+                                    />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+
+                            android:id="@+id/ll_to_date"
+                            android:layout_marginLeft="@dimen/dimen_20dp"
+                            android:layout_below="@+id/ll_from_date"
+                            android:layout_marginTop="@dimen/dimen_30dp"
+                            android:orientation="vertical"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content">
+                            <TextView
+
+                                android:fontFamily="sans-serif-medium"
+                                android:id="@+id/tv_trip_name"
+                                android:text="@string/type"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/dimen_title"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorBlack"
+
+                                />
+
+                            <RelativeLayout
+                                android:layout_marginTop="@dimen/dimen_10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/dimen_40dp">
+<!--                                <Spinner-->
+<!--                                    android:autofillHints="@string/fullday"-->
+<!--                                    android:background="@drawable/shape_reactangle_border"-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_marginRight="@dimen/dimen_35dp"-->
+<!--                                    android:layout_height="@dimen/dimen_40dp"/>-->
+
+
+                                <Spinner
+                                    android:id="@+id/sp_type"
+                                    android:background="@drawable/shape_reactangle_border"
+                                    android:layout_marginLeft="@dimen/dimen_20dp"
+                                    android:gravity="center_vertical"
+                                    android:textSize="@dimen/dimen_18dp"
+                                    android:entries="@array/type_day"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"/>
+
+                                <ImageView
+                                    android:visibility="gone"
+                                    android:id="@+id/iv_down_trip_duration"
+
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:src="@drawable/ic_dropdown_arrow"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/dimen_40dp"/>
+                                <ImageView
+                                    android:id="@+id/iv_down_trip_duration_arrow"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="@dimen/dimen_5dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:src="@drawable/ic_down_arrow"
+                                    android:layout_width="@dimen/dimen_20dp"
+                                    android:layout_height="@dimen/dimen_20dp"/>
+
+                            </RelativeLayout>
+
+                            <!--                            <LinearLayout-->
+                            <!--                                android:orientation="horizontal"-->
+                            <!--                                android:layout_width="match_parent"-->
+                            <!--                                android:layout_height="match_parent">-->
+
+                            <!--                                <EditText-->
+                            <!--                                    android:hint="@string/date_from"-->
+                            <!--                                    android:padding="@dimen/dimen_10dp"-->
+                            <!--                                    android:id="@+id/et_trip_name"-->
+                            <!--                                    android:layout_width="150dp"-->
+                            <!--                                    android:layout_height="@dimen/dimen_40dp"-->
+                            <!--                                    android:layout_marginTop="@dimen/dimen_10dp"-->
+                            <!--                                    android:background="@drawable/selector_edittext_createlisting"-->
+                            <!--                                    android:inputType="textPersonName"-->
+                            <!--                                    android:maxLines="1"-->
+                            <!--                                    />-->
+
+
+                            <!--                            </LinearLayout>-->
+
+                        </LinearLayout>
+
+                        <LinearLayout
+
+
+                            android:gravity="center_vertical"
+                            android:id="@+id/ll_noteforblocking"
+                            android:layout_marginLeft="@dimen/dimen_20dp"
+                            android:layout_below="@+id/ll_to_date"
+                            android:layout_marginTop="@dimen/dimen_10dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_marginTop="@dimen/dimen_20dp"
+                                android:id="@+id/tv_reasons"
+                                android:text="@string/noteforblocking"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/createlt_lt_heading"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorBlack"
+
+                                />
+
+                            <EditText
+                                android:layout_marginEnd="@dimen/dimen_10dp"
+                                android:layout_marginRight="@dimen/dimen_10dp"
+                                android:maxLines="1"
+                                android:padding="@dimen/dimen_10dp"
+                                android:id="@+id/et_noteforblocking"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dimen_cl_etbox"
+                                android:layout_marginTop="@dimen/dimen_5dp"
+                                android:background="@drawable/selector_edittext_createlisting"
+                                android:inputType="textPersonName"
+                                />
+
+
+                        </LinearLayout>
+
+
+
+
+                        <LinearLayout
+                            android:layout_marginTop="@dimen/dimen_20dp"
+                            android:layout_below="@+id/ll_noteforblocking"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_120dp">
+
+
+                            <Button
+
+                                android:textSize="@dimen/dimen_15sp"
+                                android:id="@+id/bt_calender_add"
+                                android:layout_width="@dimen/dimen_100dp"
+                                android:layout_height="@dimen/dimen_45dp"
+                                android:background="@drawable/selector_button"
+                                android:text="@string/add"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorWhite"
+                                />
+
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+
+
+    </ScrollView>
+
+
+
+</LinearLayout>
+

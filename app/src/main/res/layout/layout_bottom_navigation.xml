@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen_65dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.cardview.widget.CardView
+                android:layout_alignParentBottom="true"
+                android:elevation="@dimen/dimen_15dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:weightSum="5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/ll_realndeal"
+                        android:gravity="center"
+                        android:layout_marginLeft="@dimen/dimen_5dp"
+                        android:orientation="vertical"
+                        android:layout_weight="1.1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/iv_realndeal"
+                            android:src="@drawable/ic_real_n_deal"
+                            android:layout_width="@dimen/dimen_25dp"
+                            android:layout_height="@dimen/dimen_25dp"/>
+
+                        <TextView
+                            android:id="@+id/tv_realndeal"
+                            android:textColor="@color/login_text_grey"
+                            android:gravity="center_horizontal"
+                            android:text="@string/realndeals"
+                            android:textSize="@dimen/dimen_10sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/ll_trips"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_weight=".8"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/iv_trips"
+
+                            android:src="@drawable/ic_dash_trips"
+                            android:layout_width="@dimen/dimen_25dp"
+                            android:layout_height="@dimen/dimen_25dp"/>
+
+                        <TextView
+                            android:id="@+id/tv_trips"
+                            android:textColor="@color/login_text_grey"
+                            android:gravity="center_horizontal"
+                            android:text="@string/trips"
+                            android:textSize="@dimen/dimen_10sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_bookings"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/iv_bookings"
+                            android:src="@drawable/ic_dash_booking"
+                            android:layout_width="@dimen/dimen_25dp"
+                            android:layout_height="@dimen/dimen_25dp"/>
+
+                        <TextView
+                            android:id="@+id/tv_bookings"
+                            android:textColor="@color/login_text_grey"
+                            android:gravity="center_horizontal"
+                            android:text="@string/booking"
+                            android:textSize="@dimen/dimen_10sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+
+
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+
+
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_fishing_reports"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/iv_fishing_report"
+                            android:src="@drawable/ic_dash_fishingreport"
+                            android:layout_width="@dimen/dimen_25dp"
+                            android:layout_height="@dimen/dimen_25dp"/>
+
+                        <TextView
+                            android:id="@+id/tv_fishingreport"
+                            android:textColor="@color/login_text_grey"
+                            android:gravity="center_horizontal"
+                            android:text="@string/fishing_report"
+                            android:textSize="@dimen/dimen_10sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+<!--        </LinearLayout>-->
+    </RelativeLayout>
+
+</LinearLayout>

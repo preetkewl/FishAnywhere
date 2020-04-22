@@ -2,7 +2,7 @@
     <string name="app_name">FishAnywhere</string>
     <string name="usrname">Username / E - mail</string>
     <string name="pswd">Password</string>
-    <string name="forgot"><u>Forget Password</u></string>
+    <string name="forgot"><u>Forgot Password</u></string>
     <string name="basic_info">Basic Information</string>
     <string name="user_name">User Name</string>
     <string name="password">Password</string>
@@ -242,10 +242,11 @@
     <string name="trolling">Trolling</string>
     <string name="register_text">Your confirmation link send to your e-mail</string>
     <string name="create_your_tripe">Create Trip</string>
-    <string name="forget_password">Forget Password</string>
+    <string name="forget_password">Forgot Password</string>
     <string name="enter_your_acnt_email">Enter your account E-mail</string>
     <string name="email_address">E - mail Address</string>
-    <string name="send_password_to_mail">We will send password to your mail</string>
+    <string name="send_password_to_mail">Don’t worry, everyone forgets their password sometimes. We will email you a password reset link.</string>
+
     <string name="discount_per">15%</string>
     <string name="discount">Discount</string>
 
@@ -291,10 +292,9 @@
     <string name="add">Add</string>
     <string name="noteforblocking">Note for Blocking:</string>
     <string-array name="type_day">
-        <item>- Select Your Day-</item>
+        <item>- Full Day-</item>
         <item>- Half Day AM-</item>
         <item>- Half Day PM-</item>
-        <item>- Full Day-</item>
     </string-array>
     <string name="type">Type</string>
     <string name="blockingnote">Blocking Note</string>
@@ -379,7 +379,7 @@
     <string name="enter_date">Please enter trip date</string>
     <string name="select_fishe_species">Please select fish species.</string>
     <string name="upload_image">Please upload images.</string>
-    <string name="reset_password">Reset Password</string>
+    <string name="reset_password">Reset My Password</string>
     <string name="sign_out">Sign Out</string>
     <string name="cominng_soon">Coming Soon!</string>
     <string name="enter_blocking_note">Please enter blocking note.</string>

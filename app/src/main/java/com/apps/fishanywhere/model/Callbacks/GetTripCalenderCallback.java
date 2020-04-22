@@ -69,7 +69,7 @@ public class GetTripCalenderCallback {
         this.blockingNote = blockingNote;
     }
 
-    @SerializedName("type")
+    @SerializedName("option value")
     @Expose
     public String type;
     @SerializedName("bookable")

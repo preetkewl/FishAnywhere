@@ -26,7 +26,7 @@ public class AppConstants {
     public static final String STATUS_ACCEPT = "confirmed";
     public static final String STATUS_REJECT = "cancelled";
     public static final String INTENT_ACCEPT = "";
-    public static final String INTENT_REJECT = "cancel";
+    public static final String INTENT_REJECT = "decline";
 
 
 }

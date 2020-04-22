@@ -1,6 +1,5 @@
 package com.apps.fishanywhere.model.webrequest;
 
-
 import com.apps.fishanywhere.model.Callbacks.GetAddTripRecordCallback;
 import com.apps.fishanywhere.model.Callbacks.GetAllFishReportDataCallback;
 import com.apps.fishanywhere.model.Callbacks.GetBookingRecordCallback;
@@ -14,7 +13,6 @@ import com.apps.fishanywhere.model.Callbacks.GetResetPasswordCallback;
 import com.apps.fishanywhere.model.Callbacks.GetTripCalenderCallback;
 import com.apps.fishanywhere.model.Callbacks.GetUploadImageCallback;
 import com.google.gson.JsonElement;
-
 
 import java.util.ArrayList;
 
@@ -31,8 +29,6 @@ import retrofit2.http.Part;
 import retrofit2.http.Query;
 
 public interface RetrofitPost {
-    //////////////////Authenticaiton Api started////////////////////////
-
     //validate login
     @FormUrlEncoded
     @POST("wp-json/app/v2/auth/login")
@@ -81,7 +77,6 @@ public interface RetrofitPost {
     //////////////////Authenticaiton Api ended////////////////////////
 
 
-
     //////////////////Profile Api started////////////////////////
 
     //get user profile info
@@ -104,7 +99,7 @@ public interface RetrofitPost {
             @Field("profile_check_mailing_address") String checkMailingAddress,
             @Field("profile_charter_established_month") String establishedMonth,
             @Field("profile_charter_established_year") String establishedYear,
-            @Field("cap-profile-info-current-accurate") String infoCurrentAccurate,
+            @Field("cap-profile-info-current-accurate") boolean infoCurrentAccurate,
             @Field("profile_incorporated") String incorporarted,
             @Field("profile_insurance") String insuarance,
             @Field("cap-profile-required-licenses") String license,
@@ -117,9 +112,7 @@ public interface RetrofitPost {
     );
 
 
-
     //////////////////Profile Api ended////////////////////////
-
 
 
     //////////////////Fishing Report Api started////////////////////////
@@ -173,7 +166,6 @@ public interface RetrofitPost {
     );
 
 
-
     //updage trip calender info
     @FormUrlEncoded
     @POST("wp-json/app/v2/captain/update_trip_availability")
@@ -197,11 +189,7 @@ public interface RetrofitPost {
     );
 
 
-
-
     //////////////////Calender Api ended////////////////////////
-
-
 
 
     //////////////////Booking Api started////////////////////////
@@ -235,15 +223,7 @@ public interface RetrofitPost {
     );
 
 
-
-
-
-
-
-
     //////////////////Booking Api ended////////////////////////
-
-
 
 
     //get trip calender info

@@ -13,6 +13,7 @@ import com.apps.fishanywhere.view.activity.LoginActivity;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import java.io.IOException;
 import java.security.cert.CertificateException;
 import java.util.concurrent.TimeUnit;
 
@@ -23,8 +24,12 @@ import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
 
+import okhttp3.Cache;
+import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 //import okhttp3.logging.HttpLoggingInterceptor;
+import okhttp3.Request;
+import okhttp3.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -33,13 +38,25 @@ public class Utils {
     public static Retrofit retrofitObject(Context context) {
         try {
             if (context != null) {
+
+                Interceptor interceptor = new Interceptor() {
+                    @Override public Response intercept(Interceptor.Chain chain) throws IOException {
+                        Request request = chain.request();
+                        Request.Builder builder = request.newBuilder().addHeader("Cache-Control", "no-cache");
+                        request = builder.build();
+                        return chain.proceed(request);
+                    }
+                };
+
                 OkHttpClient client = new OkHttpClient.Builder()
                         .connectTimeout(300, TimeUnit.SECONDS)
                         .writeTimeout(300, TimeUnit.SECONDS)
                         .readTimeout(300, TimeUnit.SECONDS)
                         .followRedirects(false)
+                        .addInterceptor(interceptor)
                         .cache(null)
                         .build();
+
 
                 Gson gson = new GsonBuilder()
                         .setLenient()

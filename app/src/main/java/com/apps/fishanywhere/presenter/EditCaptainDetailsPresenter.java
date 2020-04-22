@@ -80,7 +80,7 @@ public class EditCaptainDetailsPresenter {
                                      String website,
                                      String esatblishedMonth,
                                      String esatblishedYear,
-                                     String currentInfoCurrnetAccurate,
+                                     boolean currentInfoCurrnetAccurate,
                                      final String isBuisnesEntity,
                                      final String isInsuarance,
                                      final String isPermitLicense,

@@ -214,8 +214,6 @@ public class CalenderActivity extends AppCompatActivity implements CalenderInter
         } catch (ParseException e) {
             e.printStackTrace();
         }
-
-
     }
 
     @Override
@@ -233,9 +231,7 @@ public class CalenderActivity extends AppCompatActivity implements CalenderInter
         }
 
         for (GetTripCalenderCallback callback : data) {
-
             Date startDate = new Date(), endDate = new Date();
-
             if ((callback.from.equals("00") && callback.to.equals("12")) || (callback.from.equals("12") && callback.to.equals("00"))) {
                 mHighlightDatesList.add(callback.fromDate);
                 continue;
@@ -252,7 +248,6 @@ public class CalenderActivity extends AppCompatActivity implements CalenderInter
             mHighlightDatesList.addAll(prepairHighlightList(startDate, endDate));
         }
 
-
         for (String s : mHighlightDatesList) {
             Calendar cal = Calendar.getInstance();
             try {
@@ -262,7 +257,6 @@ public class CalenderActivity extends AppCompatActivity implements CalenderInter
             }
             this.materialCalendarView.setDateSelected(cal, true);
         }
-
     }
 
     @Override
@@ -345,7 +339,7 @@ public class CalenderActivity extends AppCompatActivity implements CalenderInter
 
                     boolean isDetialsEntered = isDetailsedEntered(note, fromDate, toDate);
                     if (isDetialsEntered && userId != null && !userId.equals("")) {
-                        String tripdates = "type:custom,priority:10,bookable:no," + "from:" + "00:00" + ",to:" + "12:00" +
+                        String tripdates = "option value:half-day-AM,type:custom,priority:10,bookable:no," + "from:" + "00:00" + ",to:" + "12:00" +
                                 ",from_date:" + fromDate + ",to_date:" + toDate + ",blocking_note:" + note;
                         try {
                             showPogress();
@@ -364,7 +358,7 @@ public class CalenderActivity extends AppCompatActivity implements CalenderInter
 
                     boolean isDetialsEntered = isDetailsedEntered(note, fromDate, toDate);
                     if (isDetialsEntered && userId != null && !userId.equals("")) {
-                        String tripdates = "type:custom,priority:10,bookable:no," + "from:" + "12:00" + ",to:" + "00:00" +
+                        String tripdates = "option value:half-day-PM,type:custom,priority:10,bookable:no," + "from:" + "12:00" + ",to:" + "00:00" +
                                 ",from_date:" + fromDate + ",to_date:" + toDate + ",blocking_note:" + note;
                         try {
                             showPogress();
@@ -376,7 +370,12 @@ public class CalenderActivity extends AppCompatActivity implements CalenderInter
                 } else if (spTypeData.equals("- Full Day-")) {
                     boolean isDetialsEntered = isDetailsedEntered(note, fromDate, toDate);
                     if (isDetialsEntered && userId != null && !userId.equals("")) {
-                        String tripdates = "type:custom,priority:10,bookable:no," + "from:" + fromDate + ",to:" + toDate + ",blocking_note:" + note;
+
+                        if (toDate.isEmpty()){
+                            toDate = fromDate;
+                        }
+
+                        String tripdates = "option value:full-day,type:custom,priority:10,bookable:no," + "from:" + fromDate + ",to:" + toDate + ",blocking_note:" + note;
                         try {
                             showPogress();
                             calenderPresenter.addTripAvailabilty(userId, String.valueOf(charterId), note, tripdates);

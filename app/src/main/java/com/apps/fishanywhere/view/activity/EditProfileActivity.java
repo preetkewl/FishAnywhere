@@ -15,6 +15,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -117,29 +118,30 @@ public class EditProfileActivity extends AppCompatActivity implements EditCaptai
     @BindView(R.id.ll_paypal_email)
     LinearLayout llPaypalEmail;
 
+    boolean infoCurrentAccurate = false;
+
     private Context context;
     private EditCaptainDetailsPresenter editCaptainDetailsPresenter;
     private String userId;
     private CommonSharedPref commonSharedPref;
-    String firstName="";
-    String lastName="";
-    String charterServiceName="";
-    String payPalPayment="";
-    String manualPayment="";
-    String creditCardPayment="";
-    String paypalEmail="";
-    String manulaEmail="";
-    String website="";
-    String phoneNumber="";
-    String mobileNumber="";
-    String esatblishedMonth="";
-    String esatblishedYear="";
+    String firstName = "";
+    String lastName = "";
+    String charterServiceName = "";
+    String payPalPayment = "";
+    String manualPayment = "";
+    String creditCardPayment = "";
+    String paypalEmail = "";
+    String manulaEmail = "";
+    String website = "";
+    String phoneNumber = "";
+    String mobileNumber = "";
+    String esatblishedMonth = "";
+    String esatblishedYear = "";
     List<String> currentInfoCurrnetAccurate;
     List<String> isBuisnesEntity;
     List<String> isInsuarance;
     List<String> isPermitLicense;
-    String paymentMehtod="";
-
+    String paymentMehtod = "";
 
 
     private ProgressHUD progressHUD;
@@ -157,8 +159,8 @@ public class EditProfileActivity extends AppCompatActivity implements EditCaptai
         context = this;
         editCaptainDetailsPresenter = new EditCaptainDetailsPresenter(context, this);
         commonSharedPref = new CommonSharedPref(context);
-        userId= commonSharedPref.getUserId(context);
-        if(userId!=null && !userId.isEmpty()){
+        userId = commonSharedPref.getUserId(context);
+        if (userId != null && !userId.isEmpty()) {
             try {
                 showPogress();
                 editCaptainDetailsPresenter.getCaptainDetails(userId);
@@ -170,7 +172,7 @@ public class EditProfileActivity extends AppCompatActivity implements EditCaptai
 
     }
 
-    void showPogress(){
+    void showPogress() {
         progressHUD = ProgressHUD.show(context, "", true, false, new DialogInterface.OnCancelListener() {
             @Override
             public void onCancel(DialogInterface dialog) {
@@ -179,8 +181,8 @@ public class EditProfileActivity extends AppCompatActivity implements EditCaptai
         });
     }
 
-    void hideProgress(){
-        if(progressHUD!=null && progressHUD.isShowing()){
+    void hideProgress() {
+        if (progressHUD != null && progressHUD.isShowing()) {
             progressHUD.dismiss();
         }
     }
@@ -191,7 +193,7 @@ public class EditProfileActivity extends AppCompatActivity implements EditCaptai
             R.id.rb_license_permit_yes,
             R.id.rb_license_permit_no,
             R.id.bt_submit,
-    R.id.iv_back})
+            R.id.iv_back})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.iv_back:
@@ -241,59 +243,64 @@ public class EditProfileActivity extends AppCompatActivity implements EditCaptai
                 firstName = etFirstName.getText().toString();
                 lastName = etLastName.getText().toString();
                 website = etWebsite.getText().toString();
-                charterServiceName= etCharterGuideservicename.getText().toString();
-                esatblishedMonth= etMonth.getText().toString();
-                esatblishedYear= etYear.getText().toString();
-                phoneNumber= etPhoneNumber.getText().toString();
-                mobileNumber= etMobilePhoneNumber.getText().toString();
+                charterServiceName = etCharterGuideservicename.getText().toString();
+                esatblishedMonth = etMonth.getText().toString();
+                esatblishedYear = etYear.getText().toString();
+                phoneNumber = etPhoneNumber.getText().toString();
+                mobileNumber = etMobilePhoneNumber.getText().toString();
 //                paypalEmail = etPayPalEmail.getText().toString();
 //                paypalEmail = etCompanyMailingAddress.getText().toString();
 
 
-                if(rbPaypal.isChecked()){
-                    paymentMehtod= "paypal";
-                }else if(rbManual.isChecked()){
-                    paymentMehtod="manual";
-                }else if(rbCreditCard.isChecked()){
-                    paymentMehtod="creditCard";
+                if (rbPaypal.isChecked()) {
+                    paymentMehtod = "PayPal";
+                } else if (rbManual.isChecked()) {
+                    paymentMehtod = "Manual (Overnight Check)";
+                } else if (rbCreditCard.isChecked()) {
+                    paymentMehtod = "Credit Card";
                 }
 
-                if(cbAggree.isChecked()){
-                    currentInfoCurrnetAccurate.set(0,"Yes");
-                }else{
-                    currentInfoCurrnetAccurate.set(0,"No");
+                if (cbAggree.isChecked()) {
+                    infoCurrentAccurate = true;
+                    currentInfoCurrnetAccurate.set(0, "Yes");
+                } else {
+                    infoCurrentAccurate = false;
+                    currentInfoCurrnetAccurate.set(0, "No");
+                    hideProgress();
+                    Toast.makeText(context, "Please agree for your information is current and accurate.", Toast.LENGTH_SHORT).show();
+                    return;
                 }
 
-                if(rbLegalEntityYes.isChecked()){
-                    isBuisnesEntity.set(0,"Yes");
-                }else if(rbLegalEntityNo.isChecked()){
-                    isBuisnesEntity.set(0,"No");
+                if (rbLegalEntityYes.isChecked()) {
+                    isBuisnesEntity.set(0, "Yes");
+                } else if (rbLegalEntityNo.isChecked()) {
+                    isBuisnesEntity.set(0, "No");
                 }
 
-                if(rbInsuranceYes.isChecked()){
-                    isInsuarance.set(0,"Yes");
+                if (rbInsuranceYes.isChecked()) {
+                    isInsuarance.set(0, "Yes");
 
-                }else if(rbInsuranceNo.isChecked()){
-                    isInsuarance.set(0,"No");
+                } else if (rbInsuranceNo.isChecked()) {
+                    isInsuarance.set(0, "No");
                 }
 
-                if(rbLicensePermitYes.isChecked()){
-                    isPermitLicense.set(0,"Yes");
+                if (rbLicensePermitYes.isChecked()) {
+                    isPermitLicense.set(0, "Yes");
 
-                }else if(rbLicensePermitNo.isChecked()){
+                } else if (rbLicensePermitNo.isChecked()) {
 
-                    isPermitLicense.set(0,"No");
+                    isPermitLicense.set(0, "No");
                 }
 
-                if(paymentMehtod.equalsIgnoreCase("paypal")){
+                if (paymentMehtod.equalsIgnoreCase("paypal")) {
                     paypalEmail = etPayPalEmail.getText().toString();
-                }else{
-                    paypalEmail="";
+                } else {
+                    paypalEmail = "";
                 }
-                if(paymentMehtod.equalsIgnoreCase("manual")){
+                if (paymentMehtod.equalsIgnoreCase("manual")) {
                     manulaEmail = etCompanyMailingAddress.getText().toString();
-                }else{
-                    manulaEmail="";
+                } else {
+                    manulaEmail = "";
                 }
 
 
@@ -303,7 +310,7 @@ public class EditProfileActivity extends AppCompatActivity implements EditCaptai
                         charterServiceName,
                         phoneNumber,
                         mobileNumber);
-                if(isDetaileEntered) {
+                if (isDetaileEntered) {
                     try {
                         editCaptainDetailsPresenter.updateCaptainDetials(firstName,
                                 lastName,
@@ -316,7 +323,7 @@ public class EditProfileActivity extends AppCompatActivity implements EditCaptai
                                 website,
                                 esatblishedMonth,
                                 esatblishedYear,
-                                currentInfoCurrnetAccurate.get(0),
+                                infoCurrentAccurate,
                                 isBuisnesEntity.get(0),
                                 isInsuarance.get(0),
                                 isPermitLicense.get(0),
@@ -325,7 +332,6 @@ public class EditProfileActivity extends AppCompatActivity implements EditCaptai
                         e.printStackTrace();
                     }
                 }
-
 
 
                 break;
@@ -339,31 +345,35 @@ public class EditProfileActivity extends AppCompatActivity implements EditCaptai
                                    String charterServiceName,
                                    String phoneNumber,
                                    String mobileNumber) {
-        if(firstName==null || firstName.isEmpty()){
+        if (firstName == null || firstName.isEmpty()) {
             hideProgress();
             Utils.showToast(context, getResources().getString(R.string.enter_first_name));
             return false;
-        }else if(lastName==null || lastName.isEmpty()){
+        } else if (lastName == null || lastName.isEmpty()) {
             hideProgress();
             Utils.showToast(context, getResources().getString(R.string.enter_last_name));
             return false;
-        }else if(charterServiceName==null || charterServiceName.isEmpty()){
+        } else if (charterServiceName == null || charterServiceName.isEmpty()) {
             hideProgress();
             Utils.showToast(context, getResources().getString(R.string.enter_charater_service_name));
             return false;
-        }else if(website==null || website.isEmpty()){
-            hideProgress();
-            Utils.showToast(context, getResources().getString(R.string.enter_website));
-            return false;
-        }else if(phoneNumber==null || phoneNumber.isEmpty()){
-            hideProgress();
-            Utils.showToast(context, getResources().getString(R.string.enter_phone_number));
-            return false;
-        }else if(mobileNumber==null || mobileNumber.isEmpty()){
+        }
+
+//        else if (website == null || website.isEmpty()) {
+//            hideProgress();
+//            Utils.showToast(context, getResources().getString(R.string.enter_website));
+//            return false;
+//        }
+//        else if (phoneNumber == null || phoneNumber.isEmpty()) {
+//            hideProgress();
+//            Utils.showToast(context, getResources().getString(R.string.enter_phone_number));
+//            return false;
+//        }
+        else if (mobileNumber == null || mobileNumber.isEmpty()) {
             hideProgress();
             Utils.showToast(context, getResources().getString(R.string.enter_mobile_number));
             return false;
-        }else{
+        } else {
             return true;
         }
     }
@@ -375,85 +385,90 @@ public class EditProfileActivity extends AppCompatActivity implements EditCaptai
     @Override
     public void getCaptainDetails(GetCaptainDetailsCallback getCaptainDetailsCallback) {
         hideProgress();
-        if(getCaptainDetailsCallback!=null ){
+        if (getCaptainDetailsCallback != null) {
 
-            if(getCaptainDetailsCallback.getFirstName()!=null && !getCaptainDetailsCallback.getFirstName().isEmpty()) {
+            if (getCaptainDetailsCallback.getFirstName() != null && !getCaptainDetailsCallback.getFirstName().isEmpty()) {
                 firstName = getCaptainDetailsCallback.getFirstName();
                 etFirstName.setText(firstName);
             }
-            if(getCaptainDetailsCallback.getLastName()!=null && !getCaptainDetailsCallback.getLastName().isEmpty()) {
+            if (getCaptainDetailsCallback.getLastName() != null && !getCaptainDetailsCallback.getLastName().isEmpty()) {
                 lastName = getCaptainDetailsCallback.getLastName();
                 etLastName.setText(lastName);
             }
-            if(getCaptainDetailsCallback.getProfileCharterCompanyName()!=null && !getCaptainDetailsCallback.getProfileCharterCompanyName().isEmpty()) {
+            if (getCaptainDetailsCallback.getProfileCharterCompanyName() != null && !getCaptainDetailsCallback.getProfileCharterCompanyName().isEmpty()) {
                 charterServiceName = getCaptainDetailsCallback.getProfileCharterCompanyName();
                 etCharterGuideservicename.setText(charterServiceName);
             }
 
-            if(getCaptainDetailsCallback.getProfilePayoutMethod()!=null && !getCaptainDetailsCallback.getProfileMobilePhoneNumber().isEmpty()) {
+            if (getCaptainDetailsCallback.getProfilePayoutMethod() != null && !getCaptainDetailsCallback.getProfileMobilePhoneNumber().isEmpty()) {
                 paymentMehtod = getCaptainDetailsCallback.getProfilePayoutMethod();
-                if(paymentMehtod!=null && !paymentMehtod.isEmpty() && paymentMehtod.equalsIgnoreCase("paypal")){
+                if (paymentMehtod != null && !paymentMehtod.isEmpty() && paymentMehtod.equalsIgnoreCase("PayPal")) {
                     etPayPalEmail.setText(getCaptainDetailsCallback.getProfilePayoutPaypalEmail());
+                    rbPaypal.setChecked(true);
+                } else if (paymentMehtod != null && !paymentMehtod.isEmpty() && paymentMehtod.equalsIgnoreCase("Manual (Overnight Check)")) {
+                    rbManual.setChecked(true);
+                } else if (paymentMehtod != null && !paymentMehtod.isEmpty() && paymentMehtod.equalsIgnoreCase("Credit Card")) {
+                    rbCreditCard.setChecked(true);
                 }
-
             }
-            if(getCaptainDetailsCallback.getProfileCharterEstablishedMonth()!=null && !getCaptainDetailsCallback.getProfileCharterEstablishedMonth().isEmpty()) {
+
+            if (getCaptainDetailsCallback.getProfileCharterEstablishedMonth() != null && !getCaptainDetailsCallback.getProfileCharterEstablishedMonth().isEmpty()) {
                 esatblishedMonth = getCaptainDetailsCallback.getProfileCharterEstablishedMonth();
                 etMonth.setText(esatblishedMonth);
             }
-            if(getCaptainDetailsCallback.getProfileCharterEstablishedYear()!=null && !getCaptainDetailsCallback.getProfileCharterEstablishedYear().isEmpty()) {
+            if (getCaptainDetailsCallback.getProfileCharterEstablishedYear() != null && !getCaptainDetailsCallback.getProfileCharterEstablishedYear().isEmpty()) {
                 esatblishedYear = getCaptainDetailsCallback.getProfileCharterEstablishedYear();
                 etYear.setText(esatblishedYear);
             }
 
-            if(getCaptainDetailsCallback.getProfileWebsite()!=null && !getCaptainDetailsCallback.getProfileWebsite().isEmpty()) {
+            if (getCaptainDetailsCallback.getProfileWebsite() != null && !getCaptainDetailsCallback.getProfileWebsite().isEmpty()) {
                 website = getCaptainDetailsCallback.getProfileWebsite();
                 etWebsite.setText(website);
             }
 
-            if(getCaptainDetailsCallback.getProfileMobilePhoneNumber()!=null && !getCaptainDetailsCallback.getProfileMobilePhoneNumber().isEmpty()) {
+            if (getCaptainDetailsCallback.getProfileMobilePhoneNumber() != null && !getCaptainDetailsCallback.getProfileMobilePhoneNumber().isEmpty()) {
                 mobileNumber = getCaptainDetailsCallback.getProfileMobilePhoneNumber();
                 etMobilePhoneNumber.setText(mobileNumber);
             }
 
-            if(getCaptainDetailsCallback.getProfilePhoneNumber()!=null && !getCaptainDetailsCallback.getProfilePhoneNumber().isEmpty()) {
+            if (getCaptainDetailsCallback.getProfilePhoneNumber() != null && !getCaptainDetailsCallback.getProfilePhoneNumber().isEmpty()) {
                 phoneNumber = getCaptainDetailsCallback.getProfilePhoneNumber();
                 etPhoneNumber.setText(phoneNumber);
             }
 
-            if(getCaptainDetailsCallback.getCapProfileInfoCurrentAccurate()!=null && !getCaptainDetailsCallback.getCapProfileInfoCurrentAccurate().isEmpty()) {
+            if (getCaptainDetailsCallback.getCapProfileInfoCurrentAccurate() != null && !getCaptainDetailsCallback.getCapProfileInfoCurrentAccurate().isEmpty()) {
                 currentInfoCurrnetAccurate = getCaptainDetailsCallback.getCapProfileInfoCurrentAccurate();
-                if(currentInfoCurrnetAccurate.contains("Yes")){
+                if (currentInfoCurrnetAccurate.contains("Yes")) {
                     cbAggree.setChecked(true);
-                }else{
+                } else {
                     cbAggree.setChecked(false);
                 }
             }
 
-            if(getCaptainDetailsCallback.getProfileIncorporated()!=null && !getCaptainDetailsCallback.getProfileIncorporated().isEmpty()) {
+            if (getCaptainDetailsCallback.getProfileIncorporated() != null && !getCaptainDetailsCallback.getProfileIncorporated().isEmpty()) {
                 isBuisnesEntity = getCaptainDetailsCallback.getProfileIncorporated();
-                if(isBuisnesEntity.contains("Yes")){
+                if (isBuisnesEntity.contains("Yes")) {
                     rbLegalEntityYes.setChecked(true);
-                }else{
+                } else {
                     rbLegalEntityNo.setChecked(true);
                 }
             }
 
 
-            if(getCaptainDetailsCallback.getProfileInsurance()!=null && !getCaptainDetailsCallback.getProfileInsurance().isEmpty()) {
+            if (getCaptainDetailsCallback.getProfileInsurance() != null && !getCaptainDetailsCallback.getProfileInsurance().isEmpty()) {
                 isInsuarance = getCaptainDetailsCallback.getProfileInsurance();
-                if(isInsuarance.contains("Yes")){
+                if (isInsuarance.contains("Yes")) {
                     rbInsuranceYes.setChecked(true);
-                }else{
+                } else {
                     rbInsuranceNo.setChecked(true);
                 }
             }
 
-            if(getCaptainDetailsCallback.getCapProfileRequiredLicenses()!=null && !getCaptainDetailsCallback.getCapProfileRequiredLicenses().isEmpty()) {
+            if (getCaptainDetailsCallback.getCapProfileRequiredLicenses() != null && !getCaptainDetailsCallback.getCapProfileRequiredLicenses().isEmpty()) {
                 isPermitLicense = getCaptainDetailsCallback.getCapProfileRequiredLicenses();
-                if(isPermitLicense.contains("Yes")){
+                if (isPermitLicense.contains("Yes")) {
                     rbLicensePermitYes.setChecked(true);
-                }else{
+                } else {
                     rbLicensePermitNo.setChecked(true);
                 }
             }
@@ -464,7 +479,7 @@ public class EditProfileActivity extends AppCompatActivity implements EditCaptai
     @Override
     public void updateCaptainDetails(GetRegisterCallback getRegisterCallback) {
         hideProgress();
-        if(getRegisterCallback!=null && getRegisterCallback.getStatus().equalsIgnoreCase("success")){
+        if (getRegisterCallback != null && getRegisterCallback.getStatus().equalsIgnoreCase("success")) {
             etFirstName.setText("");
             etLastName.setText("");
             etCharterGuideservicename.setText("");
@@ -473,7 +488,7 @@ public class EditProfileActivity extends AppCompatActivity implements EditCaptai
             etWebsite.setText("");
             etPhoneNumber.setText("");
             etMobilePhoneNumber.setText("");
-            Utils.showToastLong(context,getResources().getString(R.string.profile_updated_successfully));
+            Utils.showToastLong(context, getResources().getString(R.string.profile_updated_successfully));
             finish();
         }
     }
@@ -495,7 +510,7 @@ public class EditProfileActivity extends AppCompatActivity implements EditCaptai
     @Override
     public void failed(String message) {
         hideProgress();
-        Utils.showToastLong(context,getResources().getString(R.string.something_went_wrong));
+        Utils.showToastLong(context, getResources().getString(R.string.something_went_wrong));
 
     }
 }

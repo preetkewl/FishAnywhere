@@ -30,8 +30,7 @@ public class CalenderPresenter {
         this.calenderInterface = calenderInterface;
     }
 
-    public void getTripCalender(final String userId, final String id
-    ) throws IOException {
+    public void getTripCalender(final String userId, final String id) throws IOException {
         calenderInterface.start();
         Retrofit retrofitObject = Utils.retrofitObject(context);
         if (retrofitObject != null) {
@@ -90,7 +89,6 @@ public class CalenderPresenter {
                 public void onResponse(Call<GetAddTripRecordCallback> call, Response<GetAddTripRecordCallback> response) {
                     calenderInterface.finish("");
                     if (response != null && response.body() != null && response.code() == 200) {
-
                         calenderInterface.addTripAvailbilty(response.body());
                     } else if (response != null && response.body() == null && response.code() == 401) {
                         calenderInterface.finish(context.getResources().getString(R.string.invalid_user_name_password));

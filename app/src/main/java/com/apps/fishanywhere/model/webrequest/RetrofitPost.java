@@ -106,7 +106,7 @@ public interface RetrofitPost {
             @Field("profile_website") String website,
             @Field("profile_phone_number") String phoneNumber,
             @Field("profile_mobile_phone_number") String mobiliPhoneNumber,
-            @Field("profile_sms_consent") String smsContent,
+            @Field("profile_sms_consent") boolean smsContent,
             @Field("description") String description,
             @Field("user_id") String userId
     );

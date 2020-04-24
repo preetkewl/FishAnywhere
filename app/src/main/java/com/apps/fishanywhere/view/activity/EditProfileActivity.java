@@ -91,6 +91,8 @@ public class EditProfileActivity extends AppCompatActivity implements EditCaptai
     EditText etYear;
     @BindView(R.id.cb_aggree)
     CheckBox cbAggree;
+    @BindView(R.id.cb_aggree_consent)
+    CheckBox cbAggreeCheckBox;
     @BindView(R.id.rb_legal_entity_yes)
     RadioButton rbLegalEntityYes;
     @BindView(R.id.rb_legal_entity_no)
@@ -248,9 +250,6 @@ public class EditProfileActivity extends AppCompatActivity implements EditCaptai
                 esatblishedYear = etYear.getText().toString();
                 phoneNumber = etPhoneNumber.getText().toString();
                 mobileNumber = etMobilePhoneNumber.getText().toString();
-//                paypalEmail = etPayPalEmail.getText().toString();
-//                paypalEmail = etCompanyMailingAddress.getText().toString();
-
 
                 if (rbPaypal.isChecked()) {
                     paymentMehtod = "PayPal";
@@ -268,6 +267,17 @@ public class EditProfileActivity extends AppCompatActivity implements EditCaptai
                     currentInfoCurrnetAccurate.set(0, "No");
                     hideProgress();
                     Toast.makeText(context, "Please agree for your information is current and accurate.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if (cbAggreeCheckBox.isChecked()) {
+                    infoCurrentAccurate = true;
+                    currentInfoCurrnetAccurate.set(0, "Yes");
+                } else {
+                    infoCurrentAccurate = false;
+                    currentInfoCurrnetAccurate.set(0, "No");
+                    hideProgress();
+                    Toast.makeText(context, "Please agree concent to receive SMS messages.", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -472,8 +482,26 @@ public class EditProfileActivity extends AppCompatActivity implements EditCaptai
                     rbLicensePermitNo.setChecked(true);
                 }
             }
-        }
 
+            if (getCaptainDetailsCallback.getProfileSmsConsent() != null ) {
+
+                if (getCaptainDetailsCallback.getProfileSmsConsent().get(0).equals("true")){
+                    cbAggreeCheckBox.setChecked(true);
+                }else {
+                    cbAggreeCheckBox.setChecked(false);
+                }
+
+            }
+
+            if (getCaptainDetailsCallback.getCapProfileInfoCurrentAccurate() != null ) {
+
+                if (getCaptainDetailsCallback.getCapProfileInfoCurrentAccurate().get(0).equals("true")){
+                    cbAggree.setChecked(true);
+                }else {
+                    cbAggree.setChecked(false);
+                }
+            }
+        }
     }
 
     @Override

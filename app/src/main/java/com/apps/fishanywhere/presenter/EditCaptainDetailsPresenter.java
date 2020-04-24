@@ -1,6 +1,7 @@
 package com.apps.fishanywhere.presenter;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.apps.fishanywhere.R;
 import com.apps.fishanywhere.misc.AppConstants;
@@ -45,6 +46,7 @@ public class EditCaptainDetailsPresenter {
                     if(response!=null && response.body()!=null && response.code()==200){
 
                         editCaptainDetailsInterface.getCaptainDetails(response.body());
+
                     }else if(response!=null && response.body()==null && response.code()==401){
                         editCaptainDetailsInterface.finish(context.getResources().getString(R.string.invalid_user_name_password));
                     }
@@ -107,7 +109,7 @@ public class EditCaptainDetailsPresenter {
                     website,
                     phoneNumber,
                     mobileNumber,
-                    "Yes",
+                    currentInfoCurrnetAccurate,
                     "Yes",
                     userId
 

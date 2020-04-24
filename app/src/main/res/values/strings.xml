@@ -363,6 +363,7 @@
     <string name="additional_info">Additional Information</string>
     <string name="established">Established</string>
     <string name="aggree">I agree that the following information is current and accurate</string>
+    <string name="aggree_consent">I consent to receive SMS messages </string>
     <string name="leagl_entity">Are you a legal business entity?</string>
     <string name="no">No</string>
     <string name="insuarance">Do you have insurance?</string>

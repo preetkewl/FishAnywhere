@@ -404,13 +404,29 @@
                                 android:layout_width="0dp"
                                 android:layout_height="45dp"/>
                         </LinearLayout>
+
                         <TextView
                             android:layout_marginTop="@dimen/dimen_10dp"
                             android:textColor="@color/colorBlack"
                             android:textSize="15sp"
-                            android:text="@string/aggree"
+                            android:text="@string/aggree_consent"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
+                        <CheckBox
+                            android:text="@string/yes"
+                            android:id="@+id/cb_aggree_consent"
+                            android:layout_marginTop="@dimen/dimen_5dp"
+                            android:background="@drawable/selector_edittext_createlisting"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"/>
+
+                        <TextView
+                        android:layout_marginTop="@dimen/dimen_10dp"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="15sp"
+                        android:text="@string/aggree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
                         <CheckBox
                             android:text="@string/yes"
                             android:id="@+id/cb_aggree"
@@ -418,6 +434,7 @@
                             android:background="@drawable/selector_edittext_createlisting"
                             android:layout_width="match_parent"
                             android:layout_height="45dp"/>
+
                         <TextView
                             android:layout_marginTop="@dimen/dimen_10dp"
                             android:textColor="@color/colorBlack"

@@ -26,20 +26,18 @@ import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class BookingListAdapter extends RecyclerView.Adapter<BookingListAdapter.bookingrecordVH>  implements BookingInterface {
-
+public class BookingListAdapter extends RecyclerView.Adapter<BookingListAdapter.bookingrecordVH> implements BookingInterface {
 
 
     private Context context;
     private ArrayList<GetBookingRecordCallback> recordCallback = new ArrayList<>();
     private BookingPresenter bookingPresenter;
-    private String userId="";
+    private String userId = "";
 
     private ProgressHUD progressHUD;
     private BookingPresenter bookingPresenterPre;
     private RecyclerView rvBookingList;
     private BookingListAdapter bookingListAdapter;
-
 
 
     public BookingListAdapter(Context ctx, ArrayList<GetBookingRecordCallback> recordCallback,
@@ -49,10 +47,10 @@ public class BookingListAdapter extends RecyclerView.Adapter<BookingListAdapter.
         this.context = ctx;
         this.recordCallback = recordCallback;
         this.bookingPresenter = new BookingPresenter(context, this);
-        this.userId= userId;
-        this.bookingPresenterPre= bookingPresenter;
-        this.rvBookingList= rvBookingList;
-        this.bookingListAdapter= bookingListAdapter;
+        this.userId = userId;
+        this.bookingPresenterPre = bookingPresenter;
+        this.rvBookingList = rvBookingList;
+        this.bookingListAdapter = bookingListAdapter;
     }
 
     @NonNull
@@ -70,7 +68,7 @@ public class BookingListAdapter extends RecyclerView.Adapter<BookingListAdapter.
         String bookingrate = "";
         String guestno = "";
         String status = "";
-        String bookingID="";
+        String bookingID = "";
 
         if (recordCallback != null && recordCallback.size() > 0) {
             GetBookingRecordCallback data = recordCallback.get(postion);
@@ -82,34 +80,33 @@ public class BookingListAdapter extends RecyclerView.Adapter<BookingListAdapter.
                     }
                     bookingrecordVH.tvUsername.setText(data.bookingProduct);
                 }
+
                 if (data.getBookingCost() != null && !data.getBookingCost().isEmpty()) {
                     bookingrate = data.getBookingCost();
                     bookingrecordVH.tvPrice.setText("USD $" + bookingrate);
                 }
                 try {
                     if (data.getBookingPersons() != null && data.getBookingPersons().size() == 0) {
-                        bookingrecordVH.tvIncludes.setText("Includes " + "0" + " Guests");
+
+                        bookingrecordVH.tvIncludes.setVisibility(View.GONE);
                     } else if (data.getBookingPersons() != null && data.getBookingPersons().get(0) != null && data.getBookingPersons().size() > 0) {
                         guestno = String.valueOf(data.getBookingPersons().get(0));
+                        bookingrecordVH.tvIncludes.setVisibility(View.GONE);
                         bookingrecordVH.tvIncludes.setText("Includes " + guestno + " Guests");
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
 
-//                $100 per additional guest
-
-                if (data.getWc_booking_has_persons() == 0){
-                                    bookingrecordVH.tvAdditionalCost.setText("Max " + data.getWc_booking_max_persons_group() + " Guests");
-
+                if (data.getWc_booking_has_persons() == 0) {
+                    bookingrecordVH.tvAdditionalCost.setText("Includes " + data.getWc_booking_max_persons_group() + " Guests");
                 } else {
-                                    bookingrecordVH.tvAdditionalCost.setText("+ $" + data.getPrice_for_each_additional_person() + "per additional guest. Max " + data.getWc_booking_max_persons_group() + " Guests");
-
+                    bookingrecordVH.tvAdditionalCost.setText("+ $" + data.getPrice_for_each_additional_person() + "per additional guest. Max " + data.getWc_booking_max_persons_group() + " Guests");
                 }
 
                 bookingrecordVH.tvCreatedAt.setText("Trip date " + data.bookingStart);
 
-                bookingrecordVH.tvBookingID.setText("Booking ID: #"+ data.bookingId);
+                bookingrecordVH.tvBookingID.setText("Booking ID: #" + data.bookingId);
 
                 if (data.getStatus() != null) {
                     if (data.getStatus().equals("pending-confirmation")) {
@@ -118,7 +115,7 @@ public class BookingListAdapter extends RecyclerView.Adapter<BookingListAdapter.
                         bookingrecordVH.other.setVisibility(View.GONE);
 
 
-                        if(data.getBookingId()!=null) {
+                        if (data.getBookingId() != null) {
                             bookingID = String.valueOf(data.getBookingId());
                         }
                         status = data.getStatus();
@@ -130,7 +127,7 @@ public class BookingListAdapter extends RecyclerView.Adapter<BookingListAdapter.
                                 try {
                                     showPogress();
                                     bookingPresenter.getBookingAccept(userId, finalBookingID, finalStatus,
-                                            bookingPresenter,rvBookingList, bookingListAdapter,context);
+                                            bookingPresenter, rvBookingList, bookingListAdapter, context);
                                 } catch (IOException e) {
                                     e.printStackTrace();
                                 }
@@ -144,7 +141,7 @@ public class BookingListAdapter extends RecyclerView.Adapter<BookingListAdapter.
                                 try {
                                     showPogress();
                                     bookingPresenter.getBookingReject(userId, finalBookingID, finalStatus,
-                                            bookingPresenter,rvBookingList, bookingListAdapter,context);
+                                            bookingPresenter, rvBookingList, bookingListAdapter, context);
                                 } catch (IOException e) {
                                     e.printStackTrace();
                                 }
@@ -191,13 +188,12 @@ public class BookingListAdapter extends RecyclerView.Adapter<BookingListAdapter.
     @Override
     public void getBokingList(ArrayList<GetBookingRecordCallback> recordCallback) {
         hideProgress();
-        if(recordCallback!=null && recordCallback.size()>0){
-            this.recordCallback= recordCallback;
+        if (recordCallback != null && recordCallback.size() > 0) {
+            this.recordCallback = recordCallback;
             rvBookingList.getLayoutManager().scrollToPosition(0);
             notifyDataSetChanged();
-        }
-        else{
-            Utils.showToast(context,"Something went wrong!");
+        } else {
+            Utils.showToast(context, "Something went wrong!");
 
         }
 
@@ -210,8 +206,8 @@ public class BookingListAdapter extends RecyclerView.Adapter<BookingListAdapter.
                                   BookingPresenter bookingPresenter,
                                   RecyclerView rvBookingList,
                                   BookingListAdapter bookingListAdapter, Context context) {
-        if(data!=null && data.getStatus()!=null && !data.getStatus().isEmpty() && data.getStatus().equalsIgnoreCase("confirmed")&&
-                data.getType()!=null && !data.getType().isEmpty() && data.getType().equalsIgnoreCase("success")){
+        if (data != null && data.getStatus() != null && !data.getStatus().isEmpty() && data.getStatus().equalsIgnoreCase("confirmed") &&
+                data.getType() != null && !data.getType().isEmpty() && data.getType().equalsIgnoreCase("success")) {
             try {
                 showPogress();
                 this.bookingPresenter.getBookingRecordValue(userId);
@@ -227,8 +223,8 @@ public class BookingListAdapter extends RecyclerView.Adapter<BookingListAdapter.
     @Override
     public void getBoookingReject(GetBookingStatusCallback data, String userId, BookingPresenter bookingPresenter, RecyclerView rvBookingList, BookingListAdapter bookingListAdapter, Context context) {
         hideProgress();
-        if(data!=null && data.getStatus()!=null && !data.getStatus().isEmpty() && data.getStatus().equalsIgnoreCase("cancelled")&&
-                data.getType()!=null && !data.getType().isEmpty() && data.getType().equalsIgnoreCase("success")){
+        if (data != null && data.getStatus() != null && !data.getStatus().isEmpty() && data.getStatus().equalsIgnoreCase("cancelled") &&
+                data.getType() != null && !data.getType().isEmpty() && data.getType().equalsIgnoreCase("success")) {
             try {
                 showPogress();
                 this.bookingPresenter.getBookingRecordValue(userId);
@@ -240,8 +236,6 @@ public class BookingListAdapter extends RecyclerView.Adapter<BookingListAdapter.
     }
 
 
-
-
     @Override
     public void start() {
 
@@ -250,13 +244,13 @@ public class BookingListAdapter extends RecyclerView.Adapter<BookingListAdapter.
     @Override
     public void finish(String message) {
         hideProgress();
-        Utils.showToast(context,message);
+        Utils.showToast(context, message);
     }
 
     @Override
     public void failed(String message) {
         hideProgress();
-        Utils.showToast(context,message);
+        Utils.showToast(context, message);
     }
 
     public class bookingrecordVH extends RecyclerView.ViewHolder {

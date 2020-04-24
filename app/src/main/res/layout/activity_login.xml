@@ -15,9 +15,6 @@
         android:layout_height="match_parent"
        >
 
-
-
-
 <ImageView
     android:id="@+id/iv_top"
     app:layout_constraintTop_toTopOf="parent"
@@ -141,7 +138,6 @@ android:padding="@dimen/dimen_2dp"
         android:layout_marginTop="@dimen/dimen_2dp"
         android:background="@drawable/shape_reactangle_border"
         android:inputType="textPersonName"
-        android:text="fatester407@gmail.com"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_username" />
 
@@ -199,7 +195,6 @@ android:padding="@dimen/dimen_2dp"
         android:paddingLeft="@dimen/dimen_10dp"
         android:layout_marginRight="@dimen/dimen_20dp"
         android:layout_marginLeft="@dimen/dimen_30dp"
-        android:text="F!shing4Money"
         android:id="@+id/et_pswd"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dimen_40dp"

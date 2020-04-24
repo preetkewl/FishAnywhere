@@ -118,9 +118,7 @@
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
 
-        <meta-data
-            android:name="com.google.android.actions"
-            android:resource="@xml/selector_button" />
+
 
         <activity
             android:name="com.apps.fishanywhere.view.activity.SignupActivity"

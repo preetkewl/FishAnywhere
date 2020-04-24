@@ -391,9 +391,7 @@ public class CalenderActivity extends AppCompatActivity implements CalenderInter
 
                 break;
             case R.id.iv_createlist_back:
-
                 finish();
-
         }
     }
 

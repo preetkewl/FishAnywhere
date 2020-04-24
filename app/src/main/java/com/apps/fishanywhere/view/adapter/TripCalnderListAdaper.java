@@ -81,12 +81,21 @@ public class TripCalnderListAdaper extends RecyclerView.Adapter<TripCalnderListA
         if(data!=null){
             if(data.getFrom()!=null && !data.getFrom().isEmpty()){
                 fromDate= data.getFrom();
-                viewHolder.tvFromDate.setText(fromDate);
+                if (fromDate.equals("00")|| fromDate.equals("12")){
+                    viewHolder.tvFromDate.setText(data.getFromDate());
+                } else {
+                    viewHolder.tvFromDate.setText(fromDate);
+                }
             }
             if(data.getTo()!=null && !data.getTo().isEmpty()){
                 toDate= data.getTo();
-                viewHolder.tvToDate.setText(toDate);
+                if (toDate.equals("00")|| toDate.equals("12")){
+                    viewHolder.tvToDate.setText(data.getFromDate());
+                } else {
+                    viewHolder.tvToDate.setText(toDate);
+                }
             }
+
             if(data.getType()!=null && !data.getType().isEmpty()){
                 type= data.getType();
                 viewHolder.tvType.setText(type);
